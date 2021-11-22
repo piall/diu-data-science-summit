@@ -21,42 +21,13 @@ p {
   box-sizing: border-box;
 }
 
-.page-container {
-  margin-top: var(--navbar-height);
-}
-
 #about,
 #speaker {
   padding: var(--page-padding);
 }
 
-nav .logo {
-  width: 161px;
-}
-
-.nav-link {
-  color: black;
-}
-
-nav {
-  padding: 33px;
-  display: flex;
-  padding: 12px 16px !important;
-  margin-bottom: 30px;
-  justify-content: space-between;
-  font-size: 16px;
-  background-color: white;
-}
-
-.nav-link-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 18px 0px;
-}
-
-.nav-link-container .buy-ticket-btn {
-  margin-left: 22px;
+.page-container {
+  margin-top: var(--navbar-height);
 }
 
 .buy-ticket-btn {
@@ -72,7 +43,7 @@ nav {
   padding: 20px 40px;
   font-size: 1em;
   background: linear-gradient(
-    78deg,
+    165deg,
     rgba(254, 250, 177, 1) 0%,
     rgba(240, 218, 91, 1) 100%
   );
@@ -104,21 +75,50 @@ nav {
   top: 35px;
   opacity: 0.6;
   z-index: -1;
-  background: -webkit-linear-gradient(
-    left,
-    rgba(54, 242, 227, 1) 0%,
-    rgba(249, 249, 249, 0) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(54, 242, 227, 1) 0%,
-    rgba(249, 249, 249, 0) 100%
-  );
   background: linear-gradient(
     to right,
     rgba(54, 242, 227, 1) 0%,
     rgba(249, 249, 249, 0) 100%
   );
+}
+
+/*----------------Nav------------------*/
+nav .logo {
+  width: 161px;
+}
+
+.nav-link {
+  color: black;
+}
+
+nav {
+  padding: 33px;
+  display: flex;
+  padding: 12px 16px !important;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  font-size: 16px;
+  background-color: white;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 18px 0px;
+}
+
+.nav-link-container .buy-ticket-btn {
+  margin-left: 22px;
+}
+
+/*----------------SLIDE------------------*/
+[data-component='slideshow'] .slide {
+  display: none;
+}
+
+[data-component='slideshow'] .slide.active {
+  display: block;
 }
 
 /*----------------About section----------------*/
@@ -211,5 +211,3 @@ nav {
   word-wrap: break-word;
   display: block;
 }
-
-/*  ====== Speakers section ====== End ===*/
