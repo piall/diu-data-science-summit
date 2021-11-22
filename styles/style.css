@@ -113,12 +113,29 @@ nav {
 }
 
 /*----------------SLIDE------------------*/
-[data-component='slideshow'] .slide {
-  display: none;
+/* .slide {
+  width: 100vw;
+  height: 100vh - var(--navbar-height);
+  max-width: 100%;
 }
 
-[data-component='slideshow'] .slide.active {
+.slide img {
+  width: 100%;
+  object-fit: cover;
+} */
+
+.slide {
+  position: relative;
   display: block;
+  width: 100vw;
+  height: 100vh - var(--navbar-height);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*----------------About section----------------*/
