@@ -113,24 +113,10 @@ nav {
 }
 
 /*----------------SLIDE------------------*/
-/* .slide {
-  width: 100vw;
-  height: 100vh - var(--navbar-height);
-  max-width: 100%;
-}
-
-.slide img {
-  width: 100%;
-  object-fit: cover;
-} */
-
 .slide {
-  position: relative;
-  display: block;
   width: 100vw;
   height: 100vh - var(--navbar-height);
   max-width: 100%;
-  overflow: hidden;
 }
 
 .slide img {
@@ -138,6 +124,13 @@ nav {
   object-fit: cover;
 }
 
+[data-component='slideshow'] .slide {
+  display: none;
+}
+
+[data-component='slideshow'] .slide.active {
+  display: block;
+}
 /*----------------About section----------------*/
 #about div > p:last-child {
   margin-bottom: 0px !important;
