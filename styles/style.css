@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 body {
-    font-family: 'Oxygen', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 
 nav .logo {
-    width: 140px;
+  width: 140px;
 }
 
 .nav-link {
-    color: black;
+  color: black;
 }
 
 nav {
-    padding: 33px;
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    font-size: 16px;
+  padding: 33px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 16px;
 }
