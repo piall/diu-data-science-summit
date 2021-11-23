@@ -13,6 +13,8 @@ for (option of options) {
 // --------------------
 
 function registrationTypeHandler(event) {
+  $('#registerButton').addClass('d-block');
+  $('#registerButton').removeClass('d-none');
   const option = event.target.innerText;
   console.log(option);
   if (option === 'Hackathon') {
@@ -132,6 +134,7 @@ function renderFormForHackathon() {
   container.append(element);
   changeTitle('Registering For Hackathon');
   changeButtonText('Hackathon');
+  addMessageOnModal('BDT 1000 is required for participating');
 }
 
 function renderFormForPanelDiscussion() {
@@ -188,6 +191,7 @@ function renderFormForPanelDiscussion() {
   container.append(element);
   changeTitle('Registering For Panel Discussion');
   changeButtonText('Panel Discussion');
+  addMessageOnModal('No fee is required for participating');
 }
 
 function renderFormForSeminar() {
@@ -244,6 +248,7 @@ function renderFormForSeminar() {
   container.append(element);
   changeTitle('Registering For Seminar');
   changeButtonText('Seminar');
+  addMessageOnModal('No fee is required for participating');
 }
 
 function renderFormForWorkshop() {
@@ -352,6 +357,7 @@ function renderFormForWorkshop() {
   container.append(element);
   changeTitle('Registering For Workshop');
   changeButtonText('Workshop');
+  addMessageOnModal('BDT 100  is required for participating');
 }
 
 function changeTitle(title) {
@@ -360,4 +366,8 @@ function changeTitle(title) {
 
 function changeButtonText(text) {
   $('#registrationType').text(text);
+}
+
+function addMessageOnModal(text) {
+  $('#message').text(text);
 }
