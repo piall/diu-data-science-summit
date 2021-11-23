@@ -22,7 +22,7 @@
     ></script>
     <!-- LIBS END-->
     <!-- Cusotm Start -->
-    <link href="/styles/style.css" rel="stylesheet" />
+    <link href="./styles/style.css" rel="stylesheet" />
     <!-- Cusotm END -->
   </head>
   <body>
@@ -52,8 +52,13 @@
             <a href="#schedule" class="nav-link">Schedule</a>
             <a href="#previous" class="nav-link">1st Data Science Summit</a>
           </div>
-          <div class="registration-btn" style="background-position: 0px 59px">
-            Registration Tickets
+          <div
+            class="registration-btn"
+            style="background-position: 0px 59px"
+            data-bs-toggle="modal"
+            data-bs-target="#registrationModal"
+          >
+            Registration
           </div>
         </div>
       </div>
@@ -93,7 +98,9 @@
                 at 2nd DIU <br />
                 Data Science Summit
               </h1>
-              <p class="date">December 11, 2021 • Ashulia Campus</p>
+              <p class="date">
+                December 11, 2021 • Daffodil Smart City, Ashulia
+              </p>
             </div>
           </div>
         </div>
@@ -135,7 +142,12 @@
             data-driven smart Bangladesh. With this purpose in mind, we conduct
             a Data Science Summit every year where we try to bring together
             leaders and professionals from various areas to engage in active
-            dialogues and share their provocative ideas.
+            dialogues and share their provocative ideas. As a part of our
+            ongoing endeavors, this year, the 2nd DIU Data Science Summit 2021,
+            organized by Data Science Lab of the Department of Software
+            Engineering of Daffodil International University, will be a daylong
+            event, taking place on Saturday 11th December 2021 at the Daffodil
+            Smart City, Ashulia.
           </p>
           <p>
             As a part of our ongoing endeavors, this year, the 2nd DIU Data
@@ -157,46 +169,79 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col" width="130"></th>
-                <th scope="col">Dec 11, Saturday</th>
+                <th scope="col" colspan="2">Morning</th>
+                <th scope="col" colspan="2">Afternoon</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td scope="row" width="130">09 - 09.30</td>
+                <td scope="row" width="130">09:00 AM - 09:30 AM</td>
                 <td>
                   <div class="event-info-container">
-                    <p class="event">Demo Event 1</p>
-                    <p class="venue">Venue</p>
+                    <p class="event">Opening Session</p>
+                    <p class="venue"></p>
                   </div>
-                  <div class="speaker-info-container">
-                    <img
-                      src="https://via.placeholder.com/450/0000FF/808080"
-                      class="circle-avatar img-fluid"
-                    />
-                    <div class="speaker-info">
-                      <h1 class="speaker">Person 1</h1>
-                      <p class="designation">Co-founder and CEO at Own</p>
-                    </div>
+                </td>
+
+                <td scope="row" width="130">12:45 PM - 01:30 PM</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Lunch Break</p>
+                    <p class="venue"></p>
                   </div>
                 </td>
               </tr>
+
               <tr>
-                <td scope="row" width="130">09 - 09.30</td>
+                <td scope="row" width="130">09:30 AM - 09:45 AM</td>
                 <td>
                   <div class="event-info-container">
-                    <p class="event">Demo Event 1</p>
-                    <p class="venue">Venue</p>
+                    <p class="event">Photo Session</p>
+                    <p class="venue"></p>
                   </div>
-                  <div class="speaker-info-container">
-                    <img
-                      src="https://via.placeholder.com/450/0000FF/808080"
-                      class="circle-avatar img-fluid"
-                    />
-                    <div class="speaker-info">
-                      <h1 class="speaker">Person 1</h1>
-                      <p class="designation">Co-founder and CEO at Own</p>
-                    </div>
+                </td>
+
+                <td scope="row" width="130">01:30 PM - 04:00 PM</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Hackathon</p>
+                    <p class="venue"></p>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td scope="row" width="130">09:45 AM - 10:45 AM</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Panel Discussion</p>
+                    <p class="venue"></p>
+                  </div>
+                </td>
+
+                <td scope="row" width="130">04:00 PM - 04:30 PM</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Prize Giving Ceremony</p>
+                    <p class="venue"></p>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td scope="row" width="130">10:45 AM - 11:45 AM</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Workshops</p>
+                    <p class="venue"></p>
+                  </div>
+                </td>
+
+                <td scope="row" width="130">04:30 PM - 05:00 PM</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Ending Session</p>
+                    <p class="venue"></p>
                   </div>
                 </td>
               </tr>
@@ -215,15 +260,17 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card shadow h-100">
               <div class="image-container">
-                <img src="https://via.placeholder.com/450/0000FF/808080
-                class="card-img-top img-fluid" alt="speaker" />
+                <img
+                  src="https://hospitalityconf.daffodil.family/wp-content/uploads/2019/04/sabur-khan-680x680.jpg"
+                  class="card-img-top img-fluid"
+                  alt="speaker"
+                />
               </div>
               <div class="card-body">
-                <h5 class="title">Person 1</h5>
+                <h5 class="title">Sabur Khan</h5>
                 <p class="details">
-                  <span class="designation">Designation</span>
-                  <span class="instution">Instution</span>
-                  <span class="sepecialist">Sepecialist</span>
+                  <span class="designation">Chairman</span>
+                  <span class="institution">DIU</span>
                 </p>
               </div>
             </div>
@@ -232,15 +279,17 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card shadow h-100">
               <div class="image-container">
-                <img src="https://via.placeholder.com/450/0000FF/808080
-                class="card-img-top img-fluid" alt="speaker" />
+                <img
+                  src="https://i1.wp.com/arc.asef.org/wp-content/uploads/2019/04/BangladeshMOHAMEDEMRANHOSSAIN_70289729_MohamedEmranHossain_DIU_Bangladesh.jpg?w=300&ssl=1"
+                  class="card-img-top img-fluid"
+                  alt="speaker"
+                />
               </div>
               <div class="card-body">
-                <h5 class="title">Person 2</h5>
+                <h5 class="title">Mohamed Emran Hossain</h5>
                 <p class="details">
-                  <span class="designation">Designation</span>
-                  <span class="instution">Instution</span>
-                  <span class="sepecialist">Sepecialist</span>
+                  <span class="designation">COO</span>
+                  <span class="institution">DIU</span>
                 </p>
               </div>
             </div>
@@ -249,15 +298,17 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card shadow h-100">
               <div class="image-container">
-                <img src="https://via.placeholder.com/450/0000FF/808080
-                class="card-img-top img-fluid" alt="speaker" />
+                <img
+                  src="https://www.textiletoday.com.bd/wp-content/uploads/2021/08/Daffodil-International-University-S-M-Mahbub-Ul-Haque-Majumder-Pro-VC.jpg"
+                  class="card-img-top img-fluid"
+                  alt="speaker"
+                />
               </div>
               <div class="card-body">
-                <h5 class="title">Person 3</h5>
+                <h5 class="title">Mahbub Ul Haque Majumder</h5>
                 <p class="details">
-                  <span class="designation">Designation</span>
-                  <span class="instution">Instution</span>
-                  <span class="sepecialist">Sepecialist</span>
+                  <span class="designation">Pro VC</span>
+                  <span class="institution">DIU</span>
                 </p>
               </div>
             </div>
@@ -266,15 +317,17 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card shadow h-100">
               <div class="image-container">
-                <img src="https://via.placeholder.com/450/0000FF/808080
-                class="card-img-top img-fluid" alt="speaker" />
+                <img
+                  src="https://yt3.ggpht.com/ytc/AKedOLTLGP6WIxeKtx4avnufu8jexCnlrRPXsLGicBWZxw=s900-c-k-c0x00ffffff-no-rj"
+                  class="card-img-top img-fluid"
+                  alt="speaker"
+                />
               </div>
               <div class="card-body">
-                <h5 class="title">Person 4</h5>
+                <h5 class="title">Imran Mahmud</h5>
                 <p class="details">
-                  <span class="designation">Designation</span>
-                  <span class="instution">Instution</span>
-                  <span class="sepecialist">Sepecialist</span>
+                  <span class="designation">Associate Professor & Head</span>
+                  <span class="institution">DIU</span>
                 </p>
               </div>
             </div>
@@ -283,15 +336,17 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card shadow h-100">
               <div class="image-container">
-                <img src="https://via.placeholder.com/450/0000FF/808080
-                class="card-img-top img-fluid" alt="speaker" />
+                <img
+                  src="https://diit.edu.bd/static/img/Professor%20Dr.%20Mostafa%20Kamal.jpg"
+                  class="card-img-top img-fluid"
+                  alt="speaker"
+                />
               </div>
               <div class="card-body">
-                <h5 class="title">Person 5</h5>
+                <h5 class="title">Mostafa Kamal</h5>
                 <p class="details">
-                  <span class="designation">Designation</span>
-                  <span class="instution">Instution</span>
-                  <span class="sepecialist">Sepecialist</span>
+                  <span class="designation">Advisor</span>
+                  <span class="institution">DIU</span>
                 </p>
               </div>
             </div>
@@ -300,15 +355,17 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card shadow h-100">
               <div class="image-container">
-                <img src="https://via.placeholder.com/450/0000FF/808080
-                class="card-img-top img-fluid" alt="speaker" />
+                <img
+                  src="https://i1.rgstatic.net/ii/profile.image/344933316743169-1459249919139_Q512/Md-Nadir-Ali.jpg"
+                  class="card-img-top img-fluid"
+                  alt="speaker"
+                />
               </div>
               <div class="card-body">
-                <h5 class="title">Person 6</h5>
+                <h5 class="title">Mohammed Nadir Bin Ali</h5>
                 <p class="details">
-                  <span class="designation">Designation</span>
-                  <span class="instution">Instution</span>
-                  <span class="sepecialist">Sepecialist</span>
+                  <span class="designation">Associate Professor</span>
+                  <span class="institution">DIU</span>
                 </p>
               </div>
             </div>
@@ -325,57 +382,28 @@
         <div class="row align-items-center m-0">
           <div class="col-md-6 guidelines">
             <ul>
+              <li>To register, go to the registration link.</li>
+              <li>Select appropriate event from the dropdown menu.</li>
+              <li>Pay 100 BDT for each workshop or 1000 BDT for hackathon.</li>
               <li>
-                All design elements, code, hardware builds, etc. for your
-                project must be created during the event. Third party tools and
-                frameworks are allowed as well as your normal tooling (Gulp,
-                Yeoman, Composer, NPM, Bower, etc.).
+                You can pay through Nagad, bKash, or Rocket to 01913874941
+                (Personal).
               </li>
-              <li>
-                Projects must involve writing significant software, though
-                hardware may be incorporated.
-              </li>
-              <li>Teams must be comprised of 1-4 people.</li>
-              <li>
-                Only ten of the competing teams will present their projects in
-                the final round of judging at the end of the event.
-              </li>
+              <li>Complete the form and send us the transaction ID.</li>
+              <li>You will get a confirmation email shortly.</li>
+              <li>For any further query, please email arman.swe@diu.edu.bd</li>
             </ul>
           </div>
           <div class="col-md-6">
             <div class="big-button-container">
-              <div class="big-registration-btn">Registration Tickets</div>
+              <div
+                class="big-registration-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#registrationModal"
+              >
+                Registration
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="text-center" id="organizer">
-        <h2 class="section-title">Organizer</h2>
-        <div class="row">
-          <div class="col m-0">
-            <img
-              src="https://iconape.com/wp-content/files/kc/193611/svg/193611.svg"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="text-center" id="collaborator">
-        <h2 class="section-title">Collaborator</h2>
-        <div class="row justify-content-center">
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <img
-              src="https://sabur.me/images/alllogo/group.png"
-              class="img-fluid"
-            />
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <img
-              src="https://sabur.me/images/alllogo/group.png"
-              class="img-fluid"
-            />
           </div>
         </div>
       </section>
@@ -384,26 +412,55 @@
         <h2 class="section-title">1st Data Science Summit</h2>
         <div class="section-description">
           <span
-            >This program was organised in online in covid-19 pandamic setution
-            and also this was a successful program.</span
-          >
+            >The 1st DIU Data Summit was a virtual summit organized in 2020.
+          </span>
         </div>
 
         <div class="row">
           <div class="col-md-4">
             <div class="image-container">
-              <img src="/assets/events/p1.png" class="img-fluid" />
+              <img src="./assets/events/p1.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-md-4">
             <div class="image-container">
-              <img src="/assets/events/p3.png" class="img-fluid" />
+              <img src="./assets/events/p3.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-md-4">
             <div class="image-container">
-              <img src="/assets/events/p4.png" class="img-fluid" />
+              <img src="./assets/events/p4.png" class="img-fluid" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="organiser">
+        <h2 class="section-title">Organiser</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 m-2 image-container">
+            <img
+              src="https://iconape.com/wp-content/files/kc/193611/svg/193611.svg"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 m-2 image-container">
+            <img
+              src="https://dslab.daffodilvarsity.edu.bd/frontend/assets/img/logo.png"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="partner">
+        <h2 class="section-title">Partner</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 m-2 image-container">
+            <img
+              src="https://sabur.me/images/alllogo/group.png"
+              class="img-fluid"
+            />
           </div>
         </div>
       </section>
@@ -419,6 +476,64 @@
         </span>
       </div>
     </footer>
+
+    <!-- MODAL Start -->
+    <div
+      class="modal fade"
+      id="registrationModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="registrationLabel"
+      aria-modal="false"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registrationLabel">Registration</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="dropdown text-center">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="registrationType"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select Your Choice
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="registrationType">
+                <li><a class="dropdown-item clickable">Panel Discussion</a></li>
+                <li><a class="dropdown-item clickable">Seminar</a></li>
+                <li><a class="dropdown-item clickable">Hackathon</a></li>
+                <li>
+                  <a class="dropdown-item clickable">Workshop</a>
+                </li>
+              </ul>
+            </div>
+            <form method="post" name="google-sheet">
+              <div class="input-container"></div>
+              <div class="pull-right d-none" id="registerButton">
+                <button type="submit" class="btn">Register</button>
+              </div>
+            </form>
+            <div class="d-flex align-items-center justify-content-between">
+              <span id="message"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL End -->
+
     <!-- LIBS Start -->
     <!-- ================================================================ -->
     <script
@@ -430,11 +545,12 @@
     <!-- LIBS END -->
 
     <!-- Cusotm Start -->
-    <script src="/scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
     <!-- ================================================================ -->
-    <script src="/scripts/slideshow.js"></script>
+    <script src="./scripts/slideshow.js"></script>
     <!-- ================================================================ -->
-    <script src="/scripts/countdown.js"></script>
+    <script src="./scripts/countdown.js"></script>
+
     <!-- Cusotm END -->
   </body>
 </html>

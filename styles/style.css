@@ -8,7 +8,7 @@
 /*----------------Common------------------*/
 body {
   font-family: 'Oxygen', sans-serif;
-  color: #313131;
+  color: var(--deep-black-color);
   overflow-x: hidden;
 }
 
@@ -38,34 +38,61 @@ p {
   padding-bottom: 100px;
 }
 
-#organizer,
-#collaborator {
-  padding-top: var(--navbar-height);
+#organiser .row,
+#partner .row {
+  --bs-gutter-x: 0;
 }
 
-#organizer .row,
-#collaborator .row {
-  --bs-gutter-x: 0;
+.clickable {
+  cursor: pointer;
+}
+
+.pull-right {
+  float: right;
 }
 
 .page-container {
   margin-top: var(--navbar-height);
 }
 
+.image-container {
+  display: grid;
+  place-content: center;
+}
+
 .registration-btn {
   word-break: break-word;
   word-wrap: break-word;
   text-decoration: none;
+  text-align: center;
   color: #313131;
   letter-spacing: 0.5px;
   white-space: nowrap;
   border-radius: 5px;
   box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
   opacity: 1;
-  padding: 20px 40px;
-  font-size: 1em;
+  padding: 25px 40px;
+  font-size: 20px;
   background: linear-gradient(
-    165deg,
+    88deg,
+    rgba(254, 250, 177, 1) 0%,
+    rgba(240, 218, 91, 1) 100%
+  );
+}
+
+.registration-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    268deg,
+    rgba(254, 250, 177, 1) 0%,
+    rgba(240, 218, 91, 1) 100%
+  );
+}
+
+.big-registration-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    305deg,
     rgba(254, 250, 177, 1) 0%,
     rgba(240, 218, 91, 1) 100%
   );
@@ -79,11 +106,12 @@ p {
   min-height: 78px;
   text-decoration: none;
   color: #313131;
+  word-break: break-all;
   letter-spacing: 0.5px;
   border-radius: 5px;
   box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
-  padding: 20px 40px;
-  font-size: 23px;
+  padding: 35px 40px;
+  font-size: 30px;
   background: linear-gradient(
     165deg,
     rgba(254, 250, 177, 1) 0%,
@@ -135,11 +163,12 @@ p {
 
 /*----------------Nav------------------*/
 nav .logo {
-  width: 161px;
+  width: 191px;
 }
 
 .nav-link {
   color: black !important;
+  font-size: 18px;
 }
 
 nav {
@@ -210,6 +239,7 @@ nav .registration-btn {
   padding: 10px 20px;
   font-weight: bold;
   font-size: 23px;
+  text-align: center;
 }
 
 #slideshow .overlay-container {
@@ -326,7 +356,6 @@ nav .registration-btn {
   text-transform: none;
   box-sizing: border-box;
   margin-bottom: 0.3125rem;
-  line-height: 1.5em;
 }
 
 #speaker .card .details {
@@ -374,6 +403,8 @@ nav .registration-btn {
   word-break: break-word;
   word-wrap: break-word;
   box-sizing: border-box;
+  width: 100%;
+  overflow: auto;
 }
 
 .schedule-container .table > :not(:first-child) {
@@ -397,12 +428,17 @@ nav .registration-btn {
 .schedule-container th {
   font-family: 'Jost', sans-serif;
   font-size: 16px;
+  text-align: center;
   font-weight: normal;
   line-height: 30px;
   white-space: nowrap;
   overflow-wrap: normal;
   color: #313131;
   padding: 14px 20px;
+}
+
+.schedule-container td:nth-child(odd) {
+  font-size: 17px;
 }
 
 .schedule-container td {
@@ -460,20 +496,21 @@ nav .registration-btn {
 
 #registration .guidelines {
   text-align: justify;
+  font-size: 18px;
 }
 
 #registration .guidelines li:not(:last-child) {
   margin-bottom: 10px;
 }
-/*----------------Organizer section----------------*/
-#organizer img {
+/*----------------organiser section----------------*/
+#organiser img {
   max-height: 110px;
-  max-width: 210;
+  max-width: 210px;
 }
 /*----------------Collaborataor section----------------*/
-#collaborator img {
+#partner img {
   max-height: 110px;
-  max-width: 210;
+  max-width: 210px;
 }
 
 /*----------------Previous----------------*/
@@ -517,4 +554,89 @@ footer a {
 
 footer a:hover {
   color: rgb(208, 208, 250);
+}
+
+/*----------------Footer----------------*/
+#registrationModal .modal-content {
+  height: 80vh;
+}
+
+#registrationModal .input-container {
+  height: 50vh;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+#registrationModal .payment-container {
+  display: flex;
+}
+
+#registrationModal .payment-container label {
+  margin-right: 10px;
+}
+
+#registrationModal .modal-title {
+  text-align: center;
+  font-family: 'Jost', 'sans-serif';
+}
+
+#registrationModal .form-label {
+  font-size: 17px;
+}
+
+#registrationModal input::placeholder {
+  font-size: 14px !important;
+}
+
+#registrationModal .form-label::after {
+  content: '*';
+  color: red;
+  margin-left: 5px;
+}
+
+#registrationModal #registrationType {
+  background-color: var(--purple-color);
+}
+
+#registrationModal .modal-header {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#registrationModal #message {
+  padding: 0px 2px;
+  color: red;
+  font-size: 16px;
+}
+
+#registrationModal .fee {
+  font-size: 15px;
+  margin: 8px 0px;
+  color: var(--purple-color);
+  font-weight: bold;
+}
+
+#registrationModal .form-check-label {
+  font-size: 15px;
+}
+
+#addMoreMemberButton {
+  background-color: var(--sky-color);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+#registerButton button {
+  color: var(--deep-black-color);
+  background: linear-gradient(
+    165deg,
+    rgba(254, 250, 177, 1) 0%,
+    rgba(240, 218, 91, 1) 100%
+  );
+}
+
+#registerButton {
+  padding: 10px;
 }

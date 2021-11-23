@@ -1,9 +1,10 @@
 :root {
-  --page-padding: 0px 100px;
-  --navbar-height: 96.42px;
+  --page-padding: 0px 45px;
+  --navbar-height: 108.8px;
   /* Color */
   --purple-color: #594174;
   --sky-color: #6ec1e4;
   --logo-sky-color: #6ec1e4;
+  --deep-black-color: #313131;
   --light-grey-color: rgba(231, 231, 231, 0.548);
 }
