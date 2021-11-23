@@ -27,6 +27,19 @@ p {
   padding: var(--page-padding);
 }
 
+#about,
+#schedule,
+#speaker,
+#registration {
+  padding-top: var(--navbar-height);
+  padding-bottom: 100px;
+}
+
+#organizer,
+#collaborator {
+  padding-top: var(--navbar-height);
+}
+
 #organizer .row,
 #collaborator .row {
   --bs-gutter-x: 0;
@@ -300,8 +313,8 @@ nav {
 /*----------------Schedule section----------------*/
 #schedule {
   background-color: var(--purple-color);
-  padding: 135px 10px 100px 10px;
-  margin-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 #schedule .section-title + p {
@@ -412,10 +425,6 @@ nav {
   margin-bottom: 10px;
 }
 /*----------------Organizer section----------------*/
-#organizer {
-  padding: var(--page-padding);
-}
-
 #organizer img {
   max-height: 110px;
   max-width: 210;
