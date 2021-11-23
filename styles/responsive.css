@@ -24,6 +24,14 @@
   #slideshow .overlay .date {
     font-size: 16px !important;
   }
+
+  .schedule-container td:nth-child(even) {
+    white-space: nowrap;
+  }
+
+  .schedule-container td:nth-child(odd) {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (min-width: 980px) {
