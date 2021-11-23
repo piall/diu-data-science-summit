@@ -82,6 +82,7 @@ function renderFormForHackathon() {
     type="text"
     class="form-control"
     id="transactionNumber"
+    name="Transaction"
     placeholder="Enter your transaction number"
   />
 </div>
@@ -91,6 +92,7 @@ function renderFormForHackathon() {
     type="text"
     class="form-control"
     id="teamName"
+    name="Team Name"
     placeholder="Enter your team name"
   />
 </div>
@@ -103,6 +105,7 @@ function renderFormForHackathon() {
     type="text"
     class="form-control"
     id="teamLeaderName"
+    name="Team Leader Name"
     placeholder="Enter your team leader name"
   />
 </div>
@@ -115,6 +118,7 @@ function renderFormForHackathon() {
     min="0"
     class="form-control"
     id="teamLeaderPhone"
+    name="Team Leader Phone"
     placeholder="Enter your team leader phone"
   />
 </div>
@@ -126,6 +130,7 @@ function renderFormForHackathon() {
     type="email"
     class="form-control"
     id="teamLeaderEmail"
+    name="Team Leader Email"
     placeholder="Enter your team leader email"
   />
 </div>
@@ -137,6 +142,7 @@ function renderFormForHackathon() {
     type="text"
     class="form-control"
     id="teamLeaderUniversity"
+    name="Team Leader University"
     placeholder="Enter your team leader university"
   />
 </div>
@@ -168,7 +174,7 @@ function renderFormForPanelDiscussion() {
       type="text"
       class="form-control"
       id="name"
-      name="name"
+      name="Name"
       placeholder="Enter your name"
     />
   </div>
@@ -180,6 +186,7 @@ function renderFormForPanelDiscussion() {
       type="number"
       class="form-control"
       id="phone"
+      name="Phone"
       min="0"
       placeholder="Enter your phone number"
     />
@@ -192,6 +199,7 @@ function renderFormForPanelDiscussion() {
       type="text"
       class="form-control"
       id="university"
+      name="University"
       placeholder="Enter your university name"
     />
   </div>
@@ -203,6 +211,7 @@ function renderFormForPanelDiscussion() {
       type="email"
       class="form-control"
       id="email"
+      name="Email"
       placeholder="name@example.com"
     />
   </div>
@@ -210,13 +219,13 @@ function renderFormForPanelDiscussion() {
   <label for="Pannel Discussion" class="form-label">Select Panel Discussion</label>
   <div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="panel" id="panel" value="Importance of Data in Health">
+      <input class="form-check-input" type="radio" name="Panel" id="panel" value="Importance of Data in Health">
       <label class="form-check-label" for="panel">
         Importance of Data in Health
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="panel" id="panel" value="Importance of Data in Education Sector">
+      <input class="form-check-input" type="radio" name="Panel" id="panel" value="Importance of Data in Education Sector">
       <label class="form-check-label" for="panel">
       Importance of Data in Education Sector
       </label>
@@ -227,6 +236,7 @@ function renderFormForPanelDiscussion() {
   container.append(element);
   changeTitle('Registering For Panel Discussion');
   changeButtonText('Panel Discussion');
+  saveToGoogleSheet('panel_discussion');
 }
 
 function renderFormForSeminar() {
@@ -243,7 +253,7 @@ function renderFormForSeminar() {
       type="text"
       class="form-control"
       id="name"
-      name="name"
+      name="Name"
       placeholder="Enter your name"
     />
   </div>
@@ -255,6 +265,7 @@ function renderFormForSeminar() {
       type="number"
       class="form-control"
       id="phone"
+      name="Phone"
       min="0"
       placeholder="Enter your phone number"
     />
@@ -267,6 +278,7 @@ function renderFormForSeminar() {
       type="text"
       class="form-control"
       id="university"
+      name="University"
       placeholder="Enter your university name"
     />
   </div>
@@ -278,6 +290,7 @@ function renderFormForSeminar() {
       type="email"
       class="form-control"
       id="email"
+      name="Email"
       placeholder="name@example.com"
     />
   </div>
@@ -302,7 +315,7 @@ function renderFormForWorkshop() {
       type="text"
       class="form-control"
       id="name"
-      name="name"
+      name="Name"
       placeholder="Enter your name"
     />
   </div>
@@ -449,7 +462,8 @@ function addMoreMember() {
   <input
     type="text"
     class="form-control"
-    id="teamLeaderName"
+    id="thirdMemberName"
+    name="Third Member Name"
     placeholder="Enter your last member name"
   />
 </div>
@@ -461,7 +475,8 @@ function addMoreMember() {
     type="number"
     min="0"
     class="form-control"
-    id="teamLeaderPhone"
+    id="thirdMemberPhone"
+    name="Third Member Phone"
     placeholder="Enter your last member phone"
   />
 </div>
@@ -472,7 +487,8 @@ function addMoreMember() {
   <input
     type="email"
     class="form-control"
-    id="teamLeaderEmail"
+    id="thirdMemberEmail"
+    name="Third Member Email"
     placeholder="Enter your last member email"
   />
 </div>
@@ -483,7 +499,8 @@ function addMoreMember() {
   <input
     type="text"
     class="form-control"
-    id="teamLeaderUniversity"
+    id="thirdMemberUniversity"
+    name="Third Member University"
     placeholder="Enter your last member university"
   />
 </div>
@@ -499,7 +516,8 @@ function addMoreMember() {
     <input
       type="text"
       class="form-control"
-      id="teamLeaderName"
+      id="secondMemberName"
+      name="Second Member Name"
       placeholder="Enter your another member name"
     />
   </div>
@@ -511,7 +529,8 @@ function addMoreMember() {
       type="number"
       min="0"
       class="form-control"
-      id="teamLeaderPhone"
+      id="secondMemberPhone"
+      name="Second Member Phone"
       placeholder="Enter your another member phone"
     />
   </div>
@@ -522,7 +541,8 @@ function addMoreMember() {
     <input
       type="email"
       class="form-control"
-      id="teamLeaderEmail"
+      id="secondMemberEmail"
+      name="Second Member Email"
       placeholder="Enter your another member email"
     />
   </div>
@@ -533,7 +553,8 @@ function addMoreMember() {
     <input
       type="text"
       class="form-control"
-      id="teamLeaderUniversity"
+      id="secondMemberUniversity"
+      name="Second Member University"
       placeholder="Enter your another member university"
     />
   </div>
@@ -581,18 +602,21 @@ function saveToGoogleSheet(sheetName) {
     scriptURL =
       'https://script.google.com/macros/s/AKfycbysB5Ph3UjgHnUy8ijwzl0rRJEHu_wJCfVwYGAcARbOyIn4S48KuD8PDW5pihQG09Ir/exec';
   } else if (sheetName === 'hackathon') {
-    scriptURL = '';
+    scriptURL =
+      'https://script.google.com/macros/s/AKfycbxP4n0F0z7LHeohGlrWeH7FzFWsN9mGhlYfYmER4wMh-k1p8lQFojGYwCfpFRHcnVMd/exec';
   } else if (sheetName === 'panel_discussion') {
-    scriptURL = '';
+    scriptURL =
+      'https://script.google.com/macros/s/AKfycbwR9g4xNhhA7alECg16RMKbg2wThCpAJ4KEGX5pH4LK35-ftnKJCrtO7c1lDk87iX8C/exec';
   } else if (sheetName === 'seminar') {
-    scriptURL = '';
+    scriptURL =
+      'https://script.google.com/macros/s/AKfycbx2l__YbwL4pKw_BkiIO7Wxdyfr4zn88FqSQ3Dfc7kash1jneD2WogJc1bjh0CX9wk6/exec';
   }
 
   const form = document.forms['google-sheet'];
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('s');
+    console.log(scriptURL);
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then((response) => alert('You have successfully submitted.'))
       .catch((error) => console.error('Error!', error.message));
