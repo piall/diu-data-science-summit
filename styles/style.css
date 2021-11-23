@@ -577,8 +577,66 @@ footer a:hover {
 
 #registrationModal .modal-title {
   text-align: center;
+  font-family: 'Jost', 'sans-serif';
 }
 
-#message {
+#registrationModal .form-label {
+  font-size: 17px;
+}
+
+#registrationModal input::placeholder {
+  font-size: 14px !important;
+}
+
+#registrationModal .form-label::after {
+  content: '*';
+  color: red;
+  margin-left: 5px;
+}
+
+#registrationModal #registrationType {
+  background-color: var(--purple-color);
+}
+
+#registrationModal .modal-header {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#registrationModal #message {
   padding: 0px 2px;
+  color: red;
+  font-size: 16px;
+}
+
+#registrationModal .fee {
+  font-size: 15px;
+  margin: 8px 0px;
+  color: var(--purple-color);
+  font-weight: bold;
+}
+
+#registrationModal .form-check-label {
+  font-size: 15px;
+}
+
+#addMoreMemberButton {
+  background-color: var(--sky-color);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+#registerButton button {
+  color: var(--deep-black-color);
+  background: linear-gradient(
+    165deg,
+    rgba(254, 250, 177, 1) 0%,
+    rgba(240, 218, 91, 1) 100%
+  );
+}
+
+#registerButton {
+  padding: 10px;
 }

@@ -153,7 +153,6 @@ function renderFormForHackathon() {
   container.append(element);
   changeTitle('Registering For Hackathon');
   changeButtonText('Hackathon');
-  addMessageOnModal('BDT 1000 is required for participating');
   console.log($('#addMoreMemberButton'));
   setTimeout(() => {
     $('#addMoreMemberButton').on('click', addMoreMember);
@@ -434,7 +433,6 @@ function renderFormForWorkshop() {
   container.append(element);
   changeTitle('Registering For Workshop');
   changeButtonText('Workshop');
-  addMessageOnModal('BDT 100  is required for participating');
   saveToGoogleSheet('workshop');
 }
 
