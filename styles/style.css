@@ -43,6 +43,14 @@ p {
   --bs-gutter-x: 0;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.pull-right {
+  float: right;
+}
+
 .page-container {
   margin-top: var(--navbar-height);
 }
@@ -547,4 +555,26 @@ footer a {
 
 footer a:hover {
   color: rgb(208, 208, 250);
+}
+
+/*----------------Footer----------------*/
+#registrationModal .modal-content {
+  height: 80vh;
+}
+
+#registrationModal .input-container {
+  height: 50vh;
+  overflow: auto;
+}
+
+#registrationModal .payment-container {
+  display: flex;
+}
+
+#registrationModal .payment-container label {
+  margin-right: 10px;
+}
+
+#registrationModal .modal-title {
+  text-align: center;
 }
