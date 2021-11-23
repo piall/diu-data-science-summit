@@ -39,6 +39,10 @@
   .section-title {
     font-size: 44px !important;
   }
+
+  #registrationModal .input-container {
+    height: 40vh !important;
+  }
 }
 
 @media screen and (min-width: 980px) {
