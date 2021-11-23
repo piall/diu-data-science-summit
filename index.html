@@ -22,7 +22,7 @@
     ></script>
     <!-- LIBS END-->
     <!-- Cusotm Start -->
-    <link href="/styles/style.css" rel="stylesheet" />
+    <link href="./styles/style.css" rel="stylesheet" />
     <!-- Cusotm END -->
   </head>
   <body>
@@ -407,17 +407,17 @@
         <div class="row">
           <div class="col-md-4">
             <div class="image-container">
-              <img src="/assets/events/p1.png" class="img-fluid" />
+              <img src="./assets/events/p1.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-md-4">
             <div class="image-container">
-              <img src="/assets/events/p3.png" class="img-fluid" />
+              <img src="./assets/events/p3.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-md-4">
             <div class="image-container">
-              <img src="/assets/events/p4.png" class="img-fluid" />
+              <img src="./assets/events/p4.png" class="img-fluid" />
             </div>
           </div>
         </div>
@@ -508,14 +508,14 @@
                 </li>
               </ul>
             </div>
-            <form>
+            <form method="post" name="google-sheet">
               <div class="input-container"></div>
+              <div class="pull-right d-none" id="registerButton">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
             </form>
             <div class="d-flex align-items-center justify-content-between">
               <span id="message"></span>
-              <div class="pull-right d-none" id="registerButton">
-                <button type="button" class="btn btn-primary">Register</button>
-              </div>
             </div>
           </div>
         </div>
@@ -534,11 +534,12 @@
     <!-- LIBS END -->
 
     <!-- Cusotm Start -->
-    <script src="/scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
     <!-- ================================================================ -->
-    <script src="/scripts/slideshow.js"></script>
+    <script src="./scripts/slideshow.js"></script>
     <!-- ================================================================ -->
-    <script src="/scripts/countdown.js"></script>
+    <script src="./scripts/countdown.js"></script>
+
     <!-- Cusotm END -->
   </body>
 </html>
