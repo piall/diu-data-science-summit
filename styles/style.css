@@ -27,6 +27,11 @@ p {
   padding: var(--page-padding);
 }
 
+#organizer .row,
+#collaborator .row {
+  --bs-gutter-x: 0;
+}
+
 .page-container {
   margin-top: var(--navbar-height);
 }
@@ -405,4 +410,18 @@ nav {
 
 #registration .guidelines li:not(:last-child) {
   margin-bottom: 10px;
+}
+/*----------------Organizer section----------------*/
+#organizer {
+  padding: var(--page-padding);
+}
+
+#organizer img {
+  max-height: 110px;
+  max-width: 210;
+}
+/*----------------Collaborataor section----------------*/
+#collaborator img {
+  max-height: 110px;
+  max-width: 210;
 }
