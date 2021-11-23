@@ -8,6 +8,7 @@
 body {
   font-family: 'Oxygen', sans-serif;
   color: #313131;
+  overflow-x: hidden;
 }
 
 p {
@@ -30,7 +31,8 @@ p {
 #about,
 #schedule,
 #speaker,
-#registration {
+#registration,
+#previous {
   padding-top: var(--navbar-height);
   padding-bottom: 100px;
 }
@@ -433,6 +435,30 @@ nav {
 #collaborator img {
   max-height: 110px;
   max-width: 210;
+}
+
+/*----------------Previous----------------*/
+#previous {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#previous image-container {
+  height: 645px;
+  width: 645px;
+}
+
+#previous img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+#previous img:not(:last-child) {
+  margin-left: 10px;
+}
+
+#previous > .row > div {
+  margin-bottom: var(--bs-gutter-x);
 }
 
 /*----------------Footer----------------*/
