@@ -389,7 +389,8 @@ function addMessageOnModal(text) {
 }
 
 function addMoreMember() {
-  const status = $('#addMoreMemberButton').text();
+  const status = $('#addMoreMemberButton').text().trim();
+  console.log(status);
   if (status === 'Add last member') {
     const element = $(`
   <div class="mb-3">
