@@ -245,6 +245,7 @@ nav .registration-btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 #countdownTimer h1 {
