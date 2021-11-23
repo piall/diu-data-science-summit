@@ -33,6 +33,7 @@ function renderFormForHackathon() {
   container.empty();
 
   const element = $(`
+  <p class="fee">BDT 1000  is required for participating</p>
   <div class="mb-3">
   <label for="hackathon" class="form-label"
     >Payment Method</label
@@ -158,6 +159,7 @@ function renderFormForPanelDiscussion() {
   container.empty();
 
   const element = $(`
+  <p class="fee">No fee is required for participating</p>
   <div class="mb-3">
     <label for="Pannel Discussion" class="form-label"
       >Name</label
@@ -203,11 +205,27 @@ function renderFormForPanelDiscussion() {
       placeholder="name@example.com"
     />
   </div>
+  <div class="mb-3">
+  <label for="Pannel Discussion" class="form-label">Select Panel Discussion</label>
+  <div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="panel" id="panel">
+      <label class="form-check-label" for="panel">
+        Importance of Data in Health
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="panel" id="panel">
+      <label class="form-check-label" for="panel">
+      Importance of Data in Education Sector
+      </label>
+    </div>
+  </div>
+</div>
   `);
   container.append(element);
   changeTitle('Registering For Panel Discussion');
   changeButtonText('Panel Discussion');
-  addMessageOnModal('No fee is required for participating');
 }
 
 function renderFormForSeminar() {
@@ -215,6 +233,7 @@ function renderFormForSeminar() {
   container.empty();
 
   const element = $(`
+  <p class="fee">No fee is required for participating</p>
   <div class="mb-3">
     <label for="Seminar" class="form-label"
       >Name</label
@@ -264,7 +283,6 @@ function renderFormForSeminar() {
   container.append(element);
   changeTitle('Registering For Seminar');
   changeButtonText('Seminar');
-  addMessageOnModal('No fee is required for participating');
 }
 
 function renderFormForWorkshop() {
@@ -272,6 +290,7 @@ function renderFormForWorkshop() {
   container.empty();
 
   const element = $(`
+  <p class="fee">BDT 100  is required for participating</p>
   <div class="mb-3">
     <label for="Workshop" class="form-label"
       >Name</label
@@ -317,6 +336,24 @@ function renderFormForWorkshop() {
       placeholder="name@example.com"
     />
   </div>
+
+  <div class="mb-3">
+  <label for="Workshop" class="form-label">Select Workshop</label>
+  <div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="workshop" id="workshop">
+      <label class="form-check-label" for="workshop">
+        Data Visualization
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="workshop" id="workshop">
+      <label class="form-check-label" for="workshop">
+        Market & Customer Analysis
+      </label>
+    </div>
+  </div>
+</div>
 
   <div class="mb-3">
     <label for="Workshop" class="form-label"
