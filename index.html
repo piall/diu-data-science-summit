@@ -461,13 +461,15 @@
 
     <!-- MODAL Start -->
     <div
-      class="modal fade"
+      class="modal fade show"
       id="registrationModal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
       tabindex="-1"
       aria-labelledby="registrationLabel"
-      aria-hidden="true"
+      aria-modal="true"
+      role="dialog"
+      style="display: block"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -480,9 +482,32 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Submit</button>
+          <div class="modal-body">
+            <div class="dropdown text-center">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="registrationType"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select Your Choice
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="registrationType">
+                <li><a class="dropdown-item clickable">Panel Discussion</a></li>
+                <li><a class="dropdown-item clickable">Seminar</a></li>
+                <li><a class="dropdown-item clickable">Hackathon</a></li>
+                <li>
+                  <a class="dropdown-item clickable">Workshop</a>
+                </li>
+              </ul>
+            </div>
+            <form>
+              <div class="input-container"></div>
+            </form>
+            <div class="pull-right bg-info">
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
           </div>
         </div>
       </div>
