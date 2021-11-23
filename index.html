@@ -52,7 +52,12 @@
             <a href="#schedule" class="nav-link">Schedule</a>
             <a href="#previous" class="nav-link">1st Data Science Summit</a>
           </div>
-          <div class="registration-btn" style="background-position: 0px 59px">
+          <div
+            class="registration-btn"
+            style="background-position: 0px 59px"
+            data-bs-toggle="modal"
+            data-bs-target="#registrationModal"
+          >
             Registration
           </div>
         </div>
@@ -453,6 +458,37 @@
         </span>
       </div>
     </footer>
+
+    <!-- MODAL Start -->
+    <div
+      class="modal fade"
+      id="registrationModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="registrationLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registrationLabel">Registration</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL End -->
+
     <!-- LIBS Start -->
     <!-- ================================================================ -->
     <script
