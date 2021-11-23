@@ -206,7 +206,9 @@ nav {
 }
 
 #slideshow .overlay .date {
-  color: var(--sky-color);
+  color: var(--logo-sky-color);
+  background-color: rgba(0, 0, 0, 0.459);
+  padding: 10px 20px;
   font-weight: bold;
   font-size: 23px;
 }
