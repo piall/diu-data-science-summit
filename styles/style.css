@@ -138,7 +138,7 @@ nav {
 }
 
 #countdown .row > div:first-child {
-  background-color: #594174;
+  background-color: var(--purple-color);
   text-align: center;
 }
 
@@ -146,7 +146,7 @@ nav {
   width: 0%;
 }
 #countdown .row > div:last-child {
-  background-color: #6ec1e4;
+  background-color: var(--sky-color);
   display: flex;
 }
 
@@ -230,7 +230,7 @@ nav {
   word-wrap: break-word;
   background: transparent;
   color: #313131;
-  font-family: 'Jost', serif;
+  font-family: 'Jost', sans-serif;
   font-size: 1.875rem;
   font-weight: 500;
   font-style: normal;
@@ -261,4 +261,106 @@ nav {
 #speaker .card .details span {
   word-wrap: break-word;
   display: block;
+}
+
+/*----------------Schedule section----------------*/
+#schedule {
+  background-color: var(--purple-color);
+  padding: 135px 10px 100px 10px;
+  margin-top: 30px;
+}
+
+#schedule .section-title + p {
+  color: white;
+}
+
+#schedule .section-title {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.schedule-container {
+  color: #616161;
+  line-height: 30px;
+  font-size: 16px;
+  word-break: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.schedule-container .table > :not(:first-child) {
+  border-top: 0px;
+}
+
+.schedule-container thead {
+  background: linear-gradient(
+    to right,
+    rgb(54, 242, 227) 0%,
+    rgb(255, 252, 182) 100%
+  );
+  font-family: 'Jost', sans-serif;
+  font-weight: normal;
+}
+
+.schedule-container tr {
+  border-bottom: 1px solid var(--light-grey-color);
+}
+
+.schedule-container th {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  color: #313131;
+  padding: 14px 20px;
+}
+
+.schedule-container td {
+  height: 110px;
+  padding: 20px 20px 0px;
+  border-left: 1px solid var(--light-grey-color);
+}
+
+.schedule-container tbody {
+  background-color: white;
+}
+
+.schedule-container .circle-avatar {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.event-info-container .event {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+
+.event-info-container .venue {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.speaker-info-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.schedule-container .speaker-info .speaker {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.schedule-container .speaker-info .designation {
+  font-size: 13px;
 }
