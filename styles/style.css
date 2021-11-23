@@ -8,7 +8,7 @@
 /*----------------Common------------------*/
 body {
   font-family: 'Oxygen', sans-serif;
-  color: #313131;
+  color: var(--deep-black-color);
   overflow-x: hidden;
 }
 
@@ -38,13 +38,8 @@ p {
   padding-bottom: 100px;
 }
 
-#organizer,
-#collaborator {
-  padding-top: var(--navbar-height);
-}
-
 #organizer .row,
-#collaborator .row {
+#partner .row {
   --bs-gutter-x: 0;
 }
 
@@ -52,20 +47,26 @@ p {
   margin-top: var(--navbar-height);
 }
 
+.image-container {
+  display: grid;
+  place-content: center;
+}
+
 .registration-btn {
   word-break: break-word;
   word-wrap: break-word;
   text-decoration: none;
+  text-align: center;
   color: #313131;
   letter-spacing: 0.5px;
   white-space: nowrap;
   border-radius: 5px;
   box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
   opacity: 1;
-  padding: 20px 40px;
-  font-size: 1em;
+  padding: 25px 40px;
+  font-size: 20px;
   background: linear-gradient(
-    165deg,
+    88deg,
     rgba(254, 250, 177, 1) 0%,
     rgba(240, 218, 91, 1) 100%
   );
@@ -82,8 +83,8 @@ p {
   letter-spacing: 0.5px;
   border-radius: 5px;
   box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
-  padding: 20px 40px;
-  font-size: 23px;
+  padding: 35px 40px;
+  font-size: 30px;
   background: linear-gradient(
     165deg,
     rgba(254, 250, 177, 1) 0%,
@@ -135,11 +136,12 @@ p {
 
 /*----------------Nav------------------*/
 nav .logo {
-  width: 161px;
+  width: 191px;
 }
 
 .nav-link {
   color: black !important;
+  font-size: 18px;
 }
 
 nav {
@@ -397,12 +399,17 @@ nav .registration-btn {
 .schedule-container th {
   font-family: 'Jost', sans-serif;
   font-size: 16px;
+  text-align: center;
   font-weight: normal;
   line-height: 30px;
   white-space: nowrap;
   overflow-wrap: normal;
   color: #313131;
   padding: 14px 20px;
+}
+
+.schedule-container td:first-child {
+  font-size: 17px;
 }
 
 .schedule-container td {
@@ -460,6 +467,7 @@ nav .registration-btn {
 
 #registration .guidelines {
   text-align: justify;
+  font-size: 18px;
 }
 
 #registration .guidelines li:not(:last-child) {
@@ -468,12 +476,12 @@ nav .registration-btn {
 /*----------------Organizer section----------------*/
 #organizer img {
   max-height: 110px;
-  max-width: 210;
+  max-width: 210px;
 }
 /*----------------Collaborataor section----------------*/
-#collaborator img {
+#partner img {
   max-height: 110px;
-  max-width: 210;
+  max-width: 210px;
 }
 
 /*----------------Previous----------------*/

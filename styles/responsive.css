@@ -6,7 +6,7 @@
   }
 
   #organizer,
-  #collaborator,
+  #partner,
   #about,
   #schedule,
   #speaker,
@@ -26,9 +26,15 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 980px) {
   .collapse.navbar-collapse {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end !important;
+  }
+
+  .collapse.navbar-collapse .navbar-nav {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
   }
 }
