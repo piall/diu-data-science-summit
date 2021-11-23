@@ -1,8 +1,11 @@
 @media screen and (max-width: 768px) {
   #about,
-  #speaker,
-  #registration {
+  #speaker {
     padding: 36px !important;
+  }
+
+  #registration {
+    padding: 10px !important;
   }
 
   #organiser,
@@ -31,6 +34,10 @@
 
   .schedule-container td:nth-child(odd) {
     white-space: nowrap;
+  }
+
+  .section-title {
+    font-size: 44px !important;
   }
 }
 
