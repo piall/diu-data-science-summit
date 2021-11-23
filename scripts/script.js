@@ -43,7 +43,7 @@ function renderFormForHackathon() {
       <input
         class="form-check-input"
         type="radio"
-        name="payment"
+        name="Payment"
         id="payment"
       />
       <label class="form-check-label" for="payment">
@@ -54,7 +54,7 @@ function renderFormForHackathon() {
       <input
         class="form-check-input"
         type="radio"
-        name="payment"
+        name="Payment"
         id="payment"
       />
       <label class="form-check-label" for="payment">
@@ -65,7 +65,7 @@ function renderFormForHackathon() {
       <input
         class="form-check-input"
         type="radio"
-        name="payment"
+        name="Payment"
         id="payment"
       />
       <label class="form-check-label" for="payment">
@@ -168,6 +168,7 @@ function renderFormForPanelDiscussion() {
       type="text"
       class="form-control"
       id="name"
+      name="name"
       placeholder="Enter your name"
     />
   </div>
@@ -209,13 +210,13 @@ function renderFormForPanelDiscussion() {
   <label for="Pannel Discussion" class="form-label">Select Panel Discussion</label>
   <div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="panel" id="panel">
+      <input class="form-check-input" type="radio" name="panel" id="panel" value="Importance of Data in Health">
       <label class="form-check-label" for="panel">
         Importance of Data in Health
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="panel" id="panel">
+      <input class="form-check-input" type="radio" name="panel" id="panel" value="Importance of Data in Education Sector">
       <label class="form-check-label" for="panel">
       Importance of Data in Education Sector
       </label>
@@ -242,6 +243,7 @@ function renderFormForSeminar() {
       type="text"
       class="form-control"
       id="name"
+      name="name"
       placeholder="Enter your name"
     />
   </div>
@@ -283,6 +285,7 @@ function renderFormForSeminar() {
   container.append(element);
   changeTitle('Registering For Seminar');
   changeButtonText('Seminar');
+  saveToGoogleSheet('seminar');
 }
 
 function renderFormForWorkshop() {
@@ -299,6 +302,7 @@ function renderFormForWorkshop() {
       type="text"
       class="form-control"
       id="name"
+      name="name"
       placeholder="Enter your name"
     />
   </div>
@@ -310,6 +314,7 @@ function renderFormForWorkshop() {
       type="number"
       class="form-control"
       id="phone"
+      name="Phone"
       min="0"
       placeholder="Enter your phone number"
     />
@@ -322,6 +327,7 @@ function renderFormForWorkshop() {
       type="text"
       class="form-control"
       id="university"
+      name="University"
       placeholder="Enter your university name"
     />
   </div>
@@ -333,6 +339,7 @@ function renderFormForWorkshop() {
       type="email"
       class="form-control"
       id="email"
+      name="Email"
       placeholder="name@example.com"
     />
   </div>
@@ -341,13 +348,13 @@ function renderFormForWorkshop() {
   <label for="Workshop" class="form-label">Select Workshop</label>
   <div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="workshop" id="workshop">
+      <input class="form-check-input" type="radio" name="Workshop" id="workshop" value="Data Visualization">
       <label class="form-check-label" for="workshop">
         Data Visualization
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="workshop" id="workshop">
+      <input class="form-check-input" type="radio" name="Workshop" id="workshop" value="Market & Customer Analysis">
       <label class="form-check-label" for="workshop">
         Market & Customer Analysis
       </label>
@@ -364,8 +371,9 @@ function renderFormForWorkshop() {
         <input
           class="form-check-input"
           type="radio"
-          name="payment"
+          name="Payment"
           id="payment"
+          value="bKash"
         />
         <label class="form-check-label" for="payment">
           bKash
@@ -375,8 +383,9 @@ function renderFormForWorkshop() {
         <input
           class="form-check-input"
           type="radio"
-          name="payment"
+          name="Payment"
           id="payment"
+          value="Rocket"
         />
         <label class="form-check-label" for="payment">
           Rocket
@@ -386,8 +395,9 @@ function renderFormForWorkshop() {
         <input
           class="form-check-input"
           type="radio"
-          name="payment"
+          name="Payment"
           id="payment"
+          value="Nagad"
         />
         <label class="form-check-label" for="payment">
           Nagad
@@ -403,6 +413,7 @@ function renderFormForWorkshop() {
       type="text"
       class="form-control"
       id="transactionNumber"
+      name="Transaction"
       placeholder="Enter your transaction number"
     />
   </div>
@@ -411,6 +422,7 @@ function renderFormForWorkshop() {
   changeTitle('Registering For Workshop');
   changeButtonText('Workshop');
   addMessageOnModal('BDT 100  is required for participating');
+  saveToGoogleSheet('workshop');
 }
 
 function changeTitle(title) {
@@ -529,4 +541,60 @@ function addMoreMember() {
     $(element).insertBefore($('#addMoreMemberButton'));
     $('#addMoreMemberButton').text('Add last member');
   }
+}
+
+function getWorkshopData() {
+  const name = $('#name').val();
+  const phone = $('#phone').val();
+  const university = $('#university').val();
+  const email = $('#email').val();
+  const workshop = $("input[name='workshop']:checked").val();
+  const payment = $("input[name='payment']:checked").val();
+  const transactionNumber = $('#transactionNumber').val();
+
+  if (
+    name === undefined ||
+    phone === undefined ||
+    university === undefined ||
+    email === undefined ||
+    workshop === undefined ||
+    payment === undefined ||
+    transactionNumber === undefined
+  ) {
+    addMessageOnModal('Please fill all the * field');
+  } else {
+    saveToGoogleSheet({
+      name,
+      phone,
+      university,
+      email,
+      workshop,
+      payment,
+      transactionNumber,
+    });
+  }
+}
+
+function saveToGoogleSheet(sheetName) {
+  let scriptURL;
+  if (sheetName === 'workshop') {
+    scriptURL =
+      'https://script.google.com/macros/s/AKfycbysB5Ph3UjgHnUy8ijwzl0rRJEHu_wJCfVwYGAcARbOyIn4S48KuD8PDW5pihQG09Ir/exec';
+  } else if (sheetName === 'hackathon') {
+    scriptURL = '';
+  } else if (sheetName === 'panel_discussion') {
+    scriptURL = '';
+  } else if (sheetName === 'seminar') {
+    scriptURL = '';
+  }
+
+  const form = document.forms['google-sheet'];
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('s');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then((response) => alert('You have successfully submitted.'))
+      .catch((error) => console.error('Error!', error.message));
+  });
 }
