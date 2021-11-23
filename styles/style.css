@@ -7,6 +7,7 @@
 /*----------------Common------------------*/
 body {
   font-family: 'Oxygen', sans-serif;
+  color: #313131;
 }
 
 p {
@@ -130,6 +131,46 @@ nav {
 
 [data-component='slideshow'] .slide.active {
   display: block;
+}
+/*----------------Countdown------------------*/
+#countdown .row > div {
+  padding: 20px 0px;
+}
+
+#countdown .row > div:first-child {
+  background-color: #594174;
+  text-align: center;
+}
+
+#countdown .row > div:first-child .section-title::before {
+  width: 0%;
+}
+#countdown .row > div:last-child {
+  background-color: #6ec1e4;
+  display: flex;
+}
+
+#countdown .section-title {
+  color: white;
+}
+
+#countdownTimer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#countdownTimer h1 {
+  font-family: 'Jost', 'sans-serif';
+  font-size: 48px;
+  text-align: center;
+  line-height: 0.8;
+  margin-bottom: 0px;
+}
+
+#countdownTimer span {
+  font-family: 'Oxygen', 'sans-serif';
+  font-size: 15px;
 }
 /*----------------About section----------------*/
 #about div > p:last-child {
