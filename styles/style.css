@@ -31,7 +31,7 @@ p {
   margin-top: var(--navbar-height);
 }
 
-.buy-ticket-btn {
+.registration-btn {
   word-break: break-word;
   word-wrap: break-word;
   text-decoration: none;
@@ -43,6 +43,26 @@ p {
   opacity: 1;
   padding: 20px 40px;
   font-size: 1em;
+  background: linear-gradient(
+    165deg,
+    rgba(254, 250, 177, 1) 0%,
+    rgba(240, 218, 91, 1) 100%
+  );
+}
+
+.big-button-container {
+  padding: 30px;
+}
+
+.big-registration-btn {
+  min-height: 78px;
+  text-decoration: none;
+  color: #313131;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  font-size: 23px;
   background: linear-gradient(
     165deg,
     rgba(254, 250, 177, 1) 0%,
@@ -83,6 +103,15 @@ p {
   );
 }
 
+.section-description {
+  text-align: center;
+  color: #616161;
+  word-break: break-word;
+  font-size: 18px;
+  line-height: 1.66667;
+  margin-bottom: 30px;
+}
+
 /*----------------Nav------------------*/
 nav .logo {
   width: 161px;
@@ -109,7 +138,7 @@ nav {
   padding: 18px 0px;
 }
 
-.nav-link-container .buy-ticket-btn {
+.nav-link-container .registration-btn {
   margin-left: 22px;
 }
 
@@ -363,4 +392,17 @@ nav {
 
 .schedule-container .speaker-info .designation {
   font-size: 13px;
+}
+
+/*----------------Registration section----------------*/
+#registration {
+  padding: var(--page-padding);
+}
+
+#registration .guidelines {
+  text-align: justify;
+}
+
+#registration .guidelines li:not(:last-child) {
+  margin-bottom: 10px;
 }
