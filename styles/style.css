@@ -3,6 +3,7 @@
 
 /*----------------IMPORT-------------------*/
 @import url('./variable.css');
+@import url('./responsive.css');
 
 /*----------------Common------------------*/
 body {
@@ -138,10 +139,11 @@ nav .logo {
 }
 
 .nav-link {
-  color: black;
+  color: black !important;
 }
 
 nav {
+  /* height: var(--navbar-height); */
   padding: 33px;
   display: flex;
   padding: 10px 16px !important;
@@ -150,14 +152,11 @@ nav {
   background-color: white;
 }
 
-.nav-link-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.navbar-nav {
   padding: 18px 0px;
 }
 
-.nav-link-container .registration-btn {
+nav .registration-btn {
   margin-left: 22px;
 }
 
