@@ -564,6 +564,7 @@ footer a:hover {
 #registrationModal .input-container {
   height: 50vh;
   overflow: auto;
+  margin-bottom: 10px;
 }
 
 #registrationModal .payment-container {
