@@ -3,8 +3,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2ND DIU DATA SCIENCE SUMMIT 2021
-    </title>
+    <title>2ND DIU DATA SCIENCE SUMMIT 2021</title>
+    <link
+      rel="icon"
+      href="https://dslab.daffodilvarsity.edu.bd/summit/images/logo.png"
+    />
     <!-- LIBS Start-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -12,24 +15,426 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <!-- LIBS END-->
     <!-- Cusotm Start -->
-    <link href="/styles/style.css" rel="stylesheet"></link>
+    <link href="/styles/style.css" rel="stylesheet" />
     <!-- Cusotm END -->
   </head>
   <body>
-    <nav class="shadow-sm">
-        <img src="https://dslab.daffodilvarsity.edu.bd/summit/images/logo.png" class="logo" class="img-fluid"/>
-        <div class="d-flex align-items-center">
-          <a href="home" class="nav-link">Home</a>
-          <a href="speaker" class="nav-link">Speaker</a>
-          <a href="schedule" class="nav-link">Schedule</a>
-          <a href="previous" class="nav-link">1st Data Science Summit</a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="https://dslab.daffodilvarsity.edu.bd/summit/images/logo.png"
+            class="logo"
+            class="img-fluid"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a href="#speaker" class="nav-link">Speaker</a>
+            <a href="#schedule" class="nav-link">Schedule</a>
+            <a href="#previous" class="nav-link">1st Data Science Summit</a>
+          </div>
+          <div class="registration-btn" style="background-position: 0px 59px">
+            Registration Tickets
+          </div>
         </div>
+      </div>
     </nav>
+
+    <div class="page-container">
+      <section>
+        <div id="slideshow" data-component="slideshow">
+          <div role="list">
+            <div class="slide">
+              <img
+                src="https://selectuni.com/resources/uploads/Daffodil%20International%20University.jpg"
+                alt="slide"
+                class="img-fluid active"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="https://dslab.daffodilvarsity.edu.bd/summit/images/backpic.jpg"
+                alt="slide"
+                class="img-fluid"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="https://dslab.daffodilvarsity.edu.bd/summit/images/back3.jpg"
+                alt="slide"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="overlay">
+            <div class="overlay-container">
+              <h1 class="section-title">
+                Join Us
+                <br />
+                at 2nd DIU <br />
+                Data Science Summit
+              </h1>
+              <p class="date">December 11, 2021 • Ashulia Campus</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="countdown">
+        <div class="row mx-0">
+          <div class="col-md-6">
+            <h1 class="section-title">Opening In!</h1>
+          </div>
+          <div class="col-md-6" id="countdownTimer">
+            <div id="days">
+              <h1>0</h1>
+              <span>Days</span>
+            </div>
+            <div id="hours">
+              <h1>0</h1>
+              <span>Hours</span>
+            </div>
+            <div id="minutes">
+              <h1>0</h1>
+              <span>Minutes</span>
+            </div>
+            <div id="seconds">
+              <h1>0</h1>
+              <span>Seconds</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="about">
+        <h2 class="section-title">ABOUT</h2>
+        <div>
+          <p>
+            Data are transforming our world, and as one of Bangladesh's leading
+            educational institutions, Department of Software Engineering of
+            Daffodil International University aspires to pave the road toward a
+            data-driven smart Bangladesh. With this purpose in mind, we conduct
+            a Data Science Summit every year where we try to bring together
+            leaders and professionals from various areas to engage in active
+            dialogues and share their provocative ideas.
+          </p>
+          <p>
+            As a part of our ongoing endeavors, this year, the 2nd DIU Data
+            Science Summit 2021, organized by Data Science Lab of the Department
+            of Software Engineering of Daffodil International University, will
+            be a daylong event, taking place on Saturday 11th December 2021 at
+            the Daffodil Smart City, Ashulia.
+          </p>
+        </div>
+      </section>
+
+      <section id="schedule">
+        <div class="text-center">
+          <h2 class="section-title">Schedule</h2>
+          <p class="text-center">Check out the event details</p>
+        </div>
+
+        <div class="schedule-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" width="130"></th>
+                <th scope="col">Dec 11, Saturday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" width="130">09 - 09.30</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Demo Event 1</p>
+                    <p class="venue">Venue</p>
+                  </div>
+                  <div class="speaker-info-container">
+                    <img
+                      src="https://via.placeholder.com/450/0000FF/808080"
+                      class="circle-avatar img-fluid"
+                    />
+                    <div class="speaker-info">
+                      <h1 class="speaker">Person 1</h1>
+                      <p class="designation">Co-founder and CEO at Own</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" width="130">09 - 09.30</td>
+                <td>
+                  <div class="event-info-container">
+                    <p class="event">Demo Event 1</p>
+                    <p class="venue">Venue</p>
+                  </div>
+                  <div class="speaker-info-container">
+                    <img
+                      src="https://via.placeholder.com/450/0000FF/808080"
+                      class="circle-avatar img-fluid"
+                    />
+                    <div class="speaker-info">
+                      <h1 class="speaker">Person 1</h1>
+                      <p class="designation">Co-founder and CEO at Own</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="text-center" id="speaker">
+        <h2 class="section-title">Speaker</h2>
+        <div>
+          <p>Here is our honorable guest, speakers & Judges</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card shadow h-100">
+              <div class="image-container">
+                <img src="https://via.placeholder.com/450/0000FF/808080
+                class="card-img-top img-fluid" alt="speaker" />
+              </div>
+              <div class="card-body">
+                <h5 class="title">Person 1</h5>
+                <p class="details">
+                  <span class="designation">Designation</span>
+                  <span class="instution">Instution</span>
+                  <span class="sepecialist">Sepecialist</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card shadow h-100">
+              <div class="image-container">
+                <img src="https://via.placeholder.com/450/0000FF/808080
+                class="card-img-top img-fluid" alt="speaker" />
+              </div>
+              <div class="card-body">
+                <h5 class="title">Person 2</h5>
+                <p class="details">
+                  <span class="designation">Designation</span>
+                  <span class="instution">Instution</span>
+                  <span class="sepecialist">Sepecialist</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card shadow h-100">
+              <div class="image-container">
+                <img src="https://via.placeholder.com/450/0000FF/808080
+                class="card-img-top img-fluid" alt="speaker" />
+              </div>
+              <div class="card-body">
+                <h5 class="title">Person 3</h5>
+                <p class="details">
+                  <span class="designation">Designation</span>
+                  <span class="instution">Instution</span>
+                  <span class="sepecialist">Sepecialist</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card shadow h-100">
+              <div class="image-container">
+                <img src="https://via.placeholder.com/450/0000FF/808080
+                class="card-img-top img-fluid" alt="speaker" />
+              </div>
+              <div class="card-body">
+                <h5 class="title">Person 4</h5>
+                <p class="details">
+                  <span class="designation">Designation</span>
+                  <span class="instution">Instution</span>
+                  <span class="sepecialist">Sepecialist</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card shadow h-100">
+              <div class="image-container">
+                <img src="https://via.placeholder.com/450/0000FF/808080
+                class="card-img-top img-fluid" alt="speaker" />
+              </div>
+              <div class="card-body">
+                <h5 class="title">Person 5</h5>
+                <p class="details">
+                  <span class="designation">Designation</span>
+                  <span class="instution">Instution</span>
+                  <span class="sepecialist">Sepecialist</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card shadow h-100">
+              <div class="image-container">
+                <img src="https://via.placeholder.com/450/0000FF/808080
+                class="card-img-top img-fluid" alt="speaker" />
+              </div>
+              <div class="card-body">
+                <h5 class="title">Person 6</h5>
+                <p class="details">
+                  <span class="designation">Designation</span>
+                  <span class="instution">Instution</span>
+                  <span class="sepecialist">Sepecialist</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="registration">
+        <h2 class="section-title">Registration</h2>
+        <div class="section-description">
+          <span>Please read carefully</span>
+        </div>
+
+        <div class="row align-items-center m-0">
+          <div class="col-md-6 guidelines">
+            <ul>
+              <li>
+                All design elements, code, hardware builds, etc. for your
+                project must be created during the event. Third party tools and
+                frameworks are allowed as well as your normal tooling (Gulp,
+                Yeoman, Composer, NPM, Bower, etc.).
+              </li>
+              <li>
+                Projects must involve writing significant software, though
+                hardware may be incorporated.
+              </li>
+              <li>Teams must be comprised of 1-4 people.</li>
+              <li>
+                Only ten of the competing teams will present their projects in
+                the final round of judging at the end of the event.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="big-button-container">
+              <div class="big-registration-btn">Registration Tickets</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="organizer">
+        <h2 class="section-title">Organizer</h2>
+        <div class="row">
+          <div class="col m-0">
+            <img
+              src="https://iconape.com/wp-content/files/kc/193611/svg/193611.svg"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="collaborator">
+        <h2 class="section-title">Collaborator</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <img
+              src="https://sabur.me/images/alllogo/group.png"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <img
+              src="https://sabur.me/images/alllogo/group.png"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center" id="previous">
+        <h2 class="section-title">1st Data Science Summit</h2>
+        <div class="section-description">
+          <span
+            >This program was organised in online in covid-19 pandamic setution
+            and also this was a successful program.</span
+          >
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="image-container">
+              <img src="/assets/events/p1.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image-container">
+              <img src="/assets/events/p3.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image-container">
+              <img src="/assets/events/p4.png" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div>
+        <span>
+          Copyright © 2021 •
+          <a href="https://dslab.daffodilvarsity.edu.bd/"
+            >Daffodil International University Data Science Lab</a
+          >
+        </span>
+      </div>
+    </footer>
+    <!-- LIBS Start -->
+    <!-- ================================================================ -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- ================================================================ -->
+    <!-- LIBS END -->
+
     <!-- Cusotm Start -->
     <script src="/scripts/script.js"></script>
+    <!-- ================================================================ -->
+    <script src="/scripts/slideshow.js"></script>
+    <!-- ================================================================ -->
+    <script src="/scripts/countdown.js"></script>
     <!-- Cusotm END -->
   </body>
 </html>

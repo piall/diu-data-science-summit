@@ -1,0 +1,34 @@
+@media screen and (max-width: 768px) {
+  #about,
+  #speaker,
+  #registration {
+    padding: 36px !important;
+  }
+
+  #organizer,
+  #collaborator,
+  #about,
+  #schedule,
+  #speaker,
+  #registration,
+  #previous {
+    padding-top: 10px !important;
+    padding-bottom: 35px !important;
+  }
+
+  #slideshow .overlay .section-title {
+    font-size: 48px !important;
+    line-height: 1.1 !important;
+  }
+
+  #slideshow .overlay .date {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .collapse.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
