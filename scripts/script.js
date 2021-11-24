@@ -52,7 +52,8 @@ function renderFormForHackathon() {
   const container = $('#registrationModal  form > .input-container');
   container.empty();
   const element = $(`
-  <p class="fee">BDT 1000  is required for participating</p>
+  <p class="fee">BDT 1000  is required for participating. Everyone will get a hackathon kit. Winner prize money is total 35K.</p>
+  <p class="message">Minimum One to Three person can form a team</p>
   <div class="mb-3">
   <label for="hackathon" class="form-label"
     >Payment Method</label
@@ -165,7 +166,7 @@ function renderFormForHackathon() {
   />
 </div>
   <div class="btn btn-info" id="addMoreMemberButton">
-      Add more 2 member
+      Add another member
   </div>
   `);
   container.append(element);

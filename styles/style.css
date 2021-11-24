@@ -502,6 +502,18 @@ nav .registration-btn {
 #registration .guidelines li:not(:last-child) {
   margin-bottom: 10px;
 }
+
+#registration .info-container {
+  height: 70px;
+  padding: 0px 30px;
+}
+
+#registration .info-container img {
+  height: 100%;
+}
+#registration .info-container p {
+  margin-bottom: 0px;
+}
 /*----------------organiser section----------------*/
 #organiser img {
   max-height: 110px;
