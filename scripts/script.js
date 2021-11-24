@@ -65,6 +65,7 @@ function renderFormForHackathon() {
         type="radio"
         name="Payment"
         id="payment"
+        value="bKash"
       />
       <label class="form-check-label" for="payment">
         bKash
@@ -76,6 +77,7 @@ function renderFormForHackathon() {
         type="radio"
         name="Payment"
         id="payment"
+        value="Rocket"
       />
       <label class="form-check-label" for="payment">
         Rocket
@@ -87,6 +89,7 @@ function renderFormForHackathon() {
         type="radio"
         name="Payment"
         id="payment"
+        value="Nagad"
       />
       <label class="form-check-label" for="payment">
         Nagad
