@@ -614,9 +614,11 @@ function saveToGoogleSheet(sheetName) {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(scriptURL);
+    console.log(scriptURL, sheetName);
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) => alert('You have successfully submitted.'))
-      .catch((error) => console.error('Error!', error.message));
+      .then((response) =>
+        swal('Good job!', 'You will recieve confirmation email soon', 'success')
+      )
+      .catch((error) => swal('Oops!', 'An error occured', 'error'));
   });
 }
