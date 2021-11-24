@@ -17,11 +17,11 @@ $('.big-registration-btn').on('click', () => {
 });
 
 function registrationTypeHandler(event) {
+  makeEmptyField();
   $('#registerButton').addClass('d-block');
   $('#registerButton').removeClass('d-none');
   document.forms['google-sheet'].removeEventListener('submit', formHanlder);
   const option = event.target.innerText;
-  makeEmptyField();
   if (option === 'Hackathon') {
     sheetName = 'hackathon';
     renderFormForHackathon();
@@ -43,7 +43,9 @@ function makeEmptyField() {
   sheetName = null;
   scriptURL = null;
   form = null;
-  return container;
+  $('#registerButton').removeClass('d-block');
+  $('#registerButton').addClass('d-none');
+  $('#registrationType').text('Select Your Choice');
 }
 
 function renderFormForHackathon() {
