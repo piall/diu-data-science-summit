@@ -170,6 +170,7 @@ function renderFormForHackathon() {
   changeTitle('Registering For Hackathon');
   changeButtonText('Hackathon');
   saveToGoogleSheet('hackathon');
+  $('#addMoreMemberButton').on('click', addMoreMember);
 }
 
 function renderFormForPanelDiscussion() {
@@ -460,6 +461,7 @@ function addMessageOnModal(text) {
 
 function addMoreMember() {
   const status = $('#addMoreMemberButton').text().trim();
+  console.log(status);
   if (status === 'Add last member') {
     const element = $(`
   <div class="mb-3">
