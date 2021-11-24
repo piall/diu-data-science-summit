@@ -154,9 +154,7 @@ function renderFormForHackathon() {
   changeTitle('Registering For Hackathon');
   changeButtonText('Hackathon');
   console.log($('#addMoreMemberButton'));
-  setTimeout(() => {
-    $('#addMoreMemberButton').on('click', addMoreMember);
-  }, 3000);
+  saveToGoogleSheet('hackathon');
 }
 
 function renderFormForPanelDiscussion() {
@@ -598,16 +596,16 @@ function saveToGoogleSheet(sheetName) {
   let scriptURL;
   if (sheetName === 'workshop') {
     scriptURL =
-      'https://script.google.com/macros/s/AKfycbysB5Ph3UjgHnUy8ijwzl0rRJEHu_wJCfVwYGAcARbOyIn4S48KuD8PDW5pihQG09Ir/exec';
+      'https://script.google.com/macros/s/AKfycbxkG_Zwxea5QTQWNcxalVJaRk38YtkZFMzveW4j8etYySU--WWJpXfFWnPqRozGcwjuRg/exec';
   } else if (sheetName === 'hackathon') {
     scriptURL =
-      'https://script.google.com/macros/s/AKfycbxP4n0F0z7LHeohGlrWeH7FzFWsN9mGhlYfYmER4wMh-k1p8lQFojGYwCfpFRHcnVMd/exec';
+      'https://script.google.com/macros/s/AKfycbxE5lb8AZWRI8jH0JxrRRjJo9QZsxcORIlHWFXfN-lhWl-v0jeAgn6vJpquLdcxUrm27Q/exec';
   } else if (sheetName === 'panel_discussion') {
     scriptURL =
-      'https://script.google.com/macros/s/AKfycbwR9g4xNhhA7alECg16RMKbg2wThCpAJ4KEGX5pH4LK35-ftnKJCrtO7c1lDk87iX8C/exec';
+      'https://script.google.com/macros/s/AKfycbwgUDOk6ljCFa9_wlcFX-ntxod5iOYZE-3hbxNkKmlzgycHE6qIleaB1jp_43q4_7WTbQ/exec';
   } else if (sheetName === 'seminar') {
     scriptURL =
-      'https://script.google.com/macros/s/AKfycbx2l__YbwL4pKw_BkiIO7Wxdyfr4zn88FqSQ3Dfc7kash1jneD2WogJc1bjh0CX9wk6/exec';
+      'https://script.google.com/macros/s/AKfycbwslKPOGkM4MJz9AfVAmyKcievruwcEfEsf0sORaMZGr8DIBMY7D0KLJV51woUmF8CPTg/exec';
   }
 
   const form = document.forms['google-sheet'];
