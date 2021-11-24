@@ -558,6 +558,7 @@ footer a:hover {
 
 /*----------------Footer----------------*/
 #registrationModal .modal-body {
+  min-height: 250px;
   max-height: calc(100vh - 143px);
   overflow-y: auto;
 }
