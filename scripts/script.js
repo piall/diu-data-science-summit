@@ -181,7 +181,7 @@ function renderFormForPanelDiscussion() {
   container.empty();
 
   const element = $(`
-  <p class="fee">No fee is required for participating</p>
+  <p class="fee">No fee is required for participating.</p>
   <div class="mb-3">
     <label for="Pannel Discussion" class="form-label"
       >Name</label
@@ -259,7 +259,7 @@ function renderFormForSeminar() {
   container.empty();
 
   const element = $(`
-  <p class="fee">No fee is required for participating</p>
+  <p class="fee">No fee is required for participating.</p>
   <div class="mb-3">
     <label for="Seminar" class="form-label"
       >Name</label
@@ -320,7 +320,7 @@ function renderFormForWorkshop() {
   container.empty();
 
   const element = $(`
-  <p class="fee">BDT 100  is required for participating</p>
+  <p class="fee">BDT 100  is required for participating.</p>
   <div class="mb-3">
     <label for="Workshop" class="form-label"
       >Name</label
