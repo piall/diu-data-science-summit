@@ -58,7 +58,7 @@ function renderFormForHackathon() {
   <label for="hackathon" class="form-label"
     >Payment Method</label
   >
-  <div class="payment-container">
+  <div class="radio-container">
     <div class="form-check">
       <input
         class="form-check-input"
@@ -167,6 +167,49 @@ function renderFormForHackathon() {
     name="Team Leader University"
     placeholder="Enter your team leader university"
   />
+</div>
+<div class="mb-3">
+  <label for="hackathon" class="form-label"
+    >Select Team Leader T-shirt Size</label
+  >
+  <div class="radio-container">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Team Leader T-Shirt"
+        id="TL_Size"
+        value="M"
+      />
+      <label class="form-check-label" for="TL_Size">
+        M
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Team Leader T-Shirt"
+        id="TL_Size"
+        value="L"
+      />
+      <label class="form-check-label" for="TL_Size">
+        L
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Team Leader T-Shirt"
+        id="TL_Size"
+        value="XL"
+      />
+      <label class="form-check-label" for="TL_Size">
+        XL
+      </label>
+    </div>
+  </div>
 </div>
   <div class="btn btn-info" id="addMoreMemberButton">
       Add another member
@@ -395,7 +438,7 @@ function renderFormForWorkshop() {
     <label for="Workshop" class="form-label"
       >Payment Method</label
     >
-    <div class="payment-container">
+    <div class="radio-container">
       <div class="form-check">
         <input
           class="form-check-input"
@@ -472,52 +515,96 @@ function addMoreMember() {
     const element = $(`
   <div class="mb-3">
   <label for="hackathon" class="form-label"
-    >Last Member Name</label
+    >Third Member Name</label
   >
   <input
     type="text"
     class="form-control"
     id="thirdMemberName"
     name="Third Member Name"
-    placeholder="Enter your last member name"
+    placeholder="Enter your third member name"
   />
 </div>
 <div class="mb-3">
   <label for="hackathon" class="form-label"
-    >Last Member Phone</label
+    >Third Member Phone</label
   >
   <input
     type="text"
     class="form-control"
     id="thirdMemberPhone"
     name="Third Member Phone"
-    placeholder="Enter your last member phone"
+    placeholder="Enter your third member phone"
   />
 </div>
 <div class="mb-3">
   <label for="hackathon" class="form-label"
-    >Last Member Email</label
+    >Third Member Email</label
   >
   <input
     type="email"
     class="form-control"
     id="thirdMemberEmail"
     name="Third Member Email"
-    placeholder="Enter your last member email"
+    placeholder="Enter your third member email"
   />
 </div>
 <div class="mb-3">
   <label for="hackathon" class="form-label"
-    >Last Member University</label
+    >Third Member University</label
   >
   <input
     type="text"
     class="form-control"
     id="thirdMemberUniversity"
     name="Third Member University"
-    placeholder="Enter your last member university"
+    placeholder="Enter your third member university"
   />
 </div>
+<div class="mb-3">
+  <label for="hackathon" class="form-label"
+    >Select Third Member T-shirt Size</label
+  >
+  <div class="radio-container">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Third Member T-Shirt"
+        id="thirdMemberTL_Size"
+        value="M"
+      />
+      <label class="form-check-label" for="thirdMemberTL_Size">
+        M
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Third Member T-Shirt"
+        id="thirdMemberTL_Size"
+        value="L"
+      />
+      <label class="form-check-label" for="thirdMemberTL_Size">
+        L
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Third Member T-Shirt"
+        id="thirdMemberTL_Size"
+        value="XL"
+      />
+      <label class="form-check-label" for="thirdMemberTL_Size">
+        XL
+      </label>
+    </div>
+  </div>
+</div>
+
   `);
     $(element).insertBefore($('#addMoreMemberButton'));
     $('#addMoreMemberButton').addClass('d-none');
@@ -525,52 +612,95 @@ function addMoreMember() {
     const element = $(`
     <div class="mb-3">
     <label for="hackathon" class="form-label"
-      >Another Member Name</label
+      >Second Member Name</label
     >
     <input
       type="text"
       class="form-control"
       id="secondMemberName"
       name="Second Member Name"
-      placeholder="Enter your another member name"
+      placeholder="Enter your second member name"
     />
   </div>
   <div class="mb-3">
     <label for="hackathon" class="form-label"
-      >Another Member Phone</label
+      >Second Member Phone</label
     >
     <input
       type="text"
       class="form-control"
       id="secondMemberPhone"
       name="Second Member Phone"
-      placeholder="Enter your another member phone"
+      placeholder="Enter your second member phone"
     />
   </div>
   <div class="mb-3">
     <label for="hackathon" class="form-label"
-      >Another Member Email</label
+      >Second Member Email</label
     >
     <input
       type="email"
       class="form-control"
       id="secondMemberEmail"
       name="Second Member Email"
-      placeholder="Enter your another member email"
+      placeholder="Enter your second member email"
     />
   </div>
   <div class="mb-3">
     <label for="hackathon" class="form-label"
-      >Another Member University</label
+      >Second Member University</label
     >
     <input
       type="text"
       class="form-control"
       id="secondMemberUniversity"
       name="Second Member University"
-      placeholder="Enter your another member university"
+      placeholder="Enter your second member university"
     />
   </div>
+  <div class="mb-3">
+  <label for="hackathon" class="form-label"
+    >Select Second Member T-shirt Size</label
+  >
+  <div class="radio-container">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Second Member T-Shirt"
+        id="secondMemberTL_Size"
+        value="M"
+      />
+      <label class="form-check-label" for="secondMemberTL_Size">
+        M
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Second Member T-Shirt"
+        id="secondMemberTL_Size"
+        value="L"
+      />
+      <label class="form-check-label" for="secondMemberTL_Size">
+        L
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Second Member T-Shirt"
+        id="secondMemberTL_Size"
+        value="XL"
+      />
+      <label class="form-check-label" for="secondMemberTL_Size">
+        XL
+      </label>
+    </div>
+  </div>
+</div>
     `);
     $(element).insertBefore($('#addMoreMemberButton'));
     $('#addMoreMemberButton').text('Add last member');
@@ -582,8 +712,8 @@ function getWorkshopData() {
   const phone = $('#phone').val();
   const university = $('#university').val();
   const email = $('#email').val();
-  const workshop = $("input[name='workshop']:checked").val();
-  const payment = $("input[name='payment']:checked").val();
+  const workshop = $("input[name='Workshop']:checked").val();
+  const payment = $("#payment[name='Payment']:checked").val();
   const transactionNumber = $('#transactionNumber').val();
 
   if (
@@ -592,7 +722,7 @@ function getWorkshopData() {
     university === '' ||
     email === '' ||
     workshop === '' ||
-    payment === '' ||
+    payment === undefined ||
     transactionNumber === ''
   ) {
     return false;
@@ -639,16 +769,21 @@ function getHackathonData() {
   const teamLeaderPhone = $('#teamLeaderPhone').val();
   const teamLeaderUniversity = $('#teamLeaderUniversity').val();
   const teamLeaderEmail = $('#teamLeaderEmail').val();
-  const payment = $("input[name='payment']:checked").val();
+  const payment = $("#payment[name='Payment']:checked").val();
   const transactionNumber = $('#transactionNumber').val();
+  const teamLeaderTShirt = $(
+    "#TL_Size[name='Team Leader T-Shirt']:checked"
+  ).val();
+  console.log(payment, teamLeaderTShirt);
   if (
     teamName === '' ||
     teamLeaderName === '' ||
     teamLeaderPhone === '' ||
     teamLeaderUniversity === '' ||
     teamLeaderEmail === '' ||
-    payment === '' ||
-    transactionNumber === ''
+    payment === undefined ||
+    transactionNumber === '' ||
+    teamLeaderTShirt === undefined
   ) {
     return false;
   } else {
