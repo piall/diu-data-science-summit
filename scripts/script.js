@@ -17,6 +17,7 @@ function registrationTypeHandler(event) {
   $('#registerButton').removeClass('d-none');
   const option = event.target.innerText;
   console.log(option);
+  makeEmptyField();
   if (option === 'Hackathon') {
     renderFormForHackathon();
   } else if (option === 'Panel Discussion') {
@@ -28,10 +29,15 @@ function registrationTypeHandler(event) {
   }
 }
 
+function makeEmptyField() {
+  const container = $('#registrationModal  form > .input-container');
+  container.empty();
+  return container;
+}
+
 function renderFormForHackathon() {
   const container = $('#registrationModal  form > .input-container');
   container.empty();
-
   const element = $(`
   <p class="fee">BDT 1000  is required for participating</p>
   <div class="mb-3">
@@ -114,8 +120,7 @@ function renderFormForHackathon() {
     >Team Leader Phone</label
   >
   <input
-    type="number"
-    min="0"
+    type="text"
     class="form-control"
     id="teamLeaderPhone"
     name="Team Leader Phone"
@@ -180,11 +185,10 @@ function renderFormForPanelDiscussion() {
       >Phone</label
     >
     <input
-      type="number"
+      type="text"
       class="form-control"
       id="phone"
       name="Phone"
-      min="0"
       placeholder="Enter your phone number"
     />
   </div>
@@ -259,11 +263,10 @@ function renderFormForSeminar() {
       >Phone</label
     >
     <input
-      type="number"
+      type="text"
       class="form-control"
       id="phone"
       name="Phone"
-      min="0"
       placeholder="Enter your phone number"
     />
   </div>
@@ -321,11 +324,10 @@ function renderFormForWorkshop() {
       >Phone</label
     >
     <input
-      type="number"
+      type="text"
       class="form-control"
       id="phone"
       name="Phone"
-      min="0"
       placeholder="Enter your phone number"
     />
   </div>
@@ -468,8 +470,7 @@ function addMoreMember() {
     >Last Member Phone</label
   >
   <input
-    type="number"
-    min="0"
+    type="text"
     class="form-control"
     id="thirdMemberPhone"
     name="Third Member Phone"
@@ -522,8 +523,7 @@ function addMoreMember() {
       >Another Member Phone</label
     >
     <input
-      type="number"
-      min="0"
+      type="text"
       class="form-control"
       id="secondMemberPhone"
       name="Second Member Phone"
@@ -570,25 +570,85 @@ function getWorkshopData() {
   const transactionNumber = $('#transactionNumber').val();
 
   if (
-    name === undefined ||
-    phone === undefined ||
-    university === undefined ||
-    email === undefined ||
-    workshop === undefined ||
-    payment === undefined ||
-    transactionNumber === undefined
+    name === '' ||
+    phone === '' ||
+    university === '' ||
+    email === '' ||
+    workshop === '' ||
+    payment === '' ||
+    transactionNumber === ''
   ) {
-    addMessageOnModal('Please fill all the * field');
+    return false;
   } else {
-    saveToGoogleSheet({
-      name,
-      phone,
-      university,
-      email,
-      workshop,
-      payment,
-      transactionNumber,
-    });
+    return true;
+  }
+}
+
+function getSeminarData() {
+  const name = $('#name').val();
+  const phone = $('#phone').val();
+  const university = $('#university').val();
+  const email = $('#email').val();
+  console.log(typeof name, phone, university, email);
+  if (name === '' || phone === '' || university === '' || email === '') {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function getPanelDiscussionData() {
+  const name = $('#name').val();
+  const phone = $('#phone').val();
+  const university = $('#university').val();
+  const email = $('#email').val();
+  const panel = $("input[name='panel']:checked").val();
+
+  if (
+    name === '' ||
+    phone === '' ||
+    university === '' ||
+    email === '' ||
+    panel === ''
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function getHackathonData() {
+  const teamName = $('#teamName').val();
+  const teamLeaderName = $('#teamLeaderName').val();
+  const teamLeaderPhone = $('#teamLeaderPhone').val();
+  const teamLeaderUniversity = $('#teamLeaderUniversity').val();
+  const teamLeaderEmail = $('#teamLeaderEmail').val();
+  const payment = $("input[name='payment']:checked").val();
+  const transactionNumber = $('#transactionNumber').val();
+  if (
+    teamName === '' ||
+    teamLeaderName === '' ||
+    teamLeaderPhone === '' ||
+    teamLeaderUniversity === '' ||
+    teamLeaderEmail === '' ||
+    payment === '' ||
+    transactionNumber === ''
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validate(sheetName) {
+  if (sheetName === 'workshop') {
+    return getWorkshopData();
+  } else if (sheetName === 'hackathon') {
+    return getHackathonData();
+  } else if (sheetName === 'panel_discussion') {
+    return getPanelDiscussionData();
+  } else if (sheetName === 'seminar') {
+    return getSeminarData();
   }
 }
 
@@ -613,10 +673,18 @@ function saveToGoogleSheet(sheetName) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(scriptURL, sheetName);
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) =>
-        swal('Good job!', 'You will recieve confirmation email soon', 'success')
-      )
-      .catch((error) => swal('Oops!', 'An error occured', 'error'));
+    if (validate(sheetName)) {
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then((response) =>
+          swal(
+            'Good job!',
+            'You will recieve confirmation email soon',
+            'success'
+          )
+        )
+        .catch((error) => swal('Oops!', 'An error occured', 'error'));
+    } else {
+      swal('Please!', 'Fill all the field', 'info');
+    }
   });
 }
