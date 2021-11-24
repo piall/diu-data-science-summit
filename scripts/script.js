@@ -1,3 +1,7 @@
+let sheetName = null;
+let scriptURL = null;
+let form = null;
+
 $('.registration-btn').on('click', () => {
   const options = $('#registrationType + .dropdown-menu > li');
   for (option of options) {
@@ -15,16 +19,20 @@ for (option of options) {
 function registrationTypeHandler(event) {
   $('#registerButton').addClass('d-block');
   $('#registerButton').removeClass('d-none');
+  document.forms['google-sheet'].removeEventListener('submit', formHanlder);
   const option = event.target.innerText;
-  console.log(option);
   makeEmptyField();
   if (option === 'Hackathon') {
+    sheetName = 'hackathon';
     renderFormForHackathon();
   } else if (option === 'Panel Discussion') {
+    sheetName = 'panel_discussion';
     renderFormForPanelDiscussion();
   } else if (option === 'Seminar') {
+    sheetName = 'seminar';
     renderFormForSeminar();
   } else {
+    sheetName = 'workshop';
     renderFormForWorkshop();
   }
 }
@@ -32,6 +40,9 @@ function registrationTypeHandler(event) {
 function makeEmptyField() {
   const container = $('#registrationModal  form > .input-container');
   container.empty();
+  sheetName = null;
+  scriptURL = null;
+  form = null;
   return container;
 }
 
@@ -158,7 +169,6 @@ function renderFormForHackathon() {
   container.append(element);
   changeTitle('Registering For Hackathon');
   changeButtonText('Hackathon');
-  console.log($('#addMoreMemberButton'));
   saveToGoogleSheet('hackathon');
 }
 
@@ -450,7 +460,6 @@ function addMessageOnModal(text) {
 
 function addMoreMember() {
   const status = $('#addMoreMemberButton').text().trim();
-  console.log(status);
   if (status === 'Add last member') {
     const element = $(`
   <div class="mb-3">
@@ -589,7 +598,6 @@ function getSeminarData() {
   const phone = $('#phone').val();
   const university = $('#university').val();
   const email = $('#email').val();
-  console.log(typeof name, phone, university, email);
   if (name === '' || phone === '' || university === '' || email === '') {
     return false;
   } else {
@@ -653,7 +661,6 @@ function validate(sheetName) {
 }
 
 function saveToGoogleSheet(sheetName) {
-  let scriptURL;
   if (sheetName === 'workshop') {
     scriptURL =
       'https://script.google.com/macros/s/AKfycbxkG_Zwxea5QTQWNcxalVJaRk38YtkZFMzveW4j8etYySU--WWJpXfFWnPqRozGcwjuRg/exec';
@@ -668,23 +675,21 @@ function saveToGoogleSheet(sheetName) {
       'https://script.google.com/macros/s/AKfycbwslKPOGkM4MJz9AfVAmyKcievruwcEfEsf0sORaMZGr8DIBMY7D0KLJV51woUmF8CPTg/exec';
   }
 
-  const form = document.forms['google-sheet'];
+  form = document.forms['google-sheet'];
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log(scriptURL, sheetName);
-    if (validate(sheetName)) {
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then((response) =>
-          swal(
-            'Good job!',
-            'You will recieve confirmation email soon',
-            'success'
-          )
-        )
-        .catch((error) => swal('Oops!', 'An error occured', 'error'));
-    } else {
-      swal('Please!', 'Fill all the field', 'info');
-    }
-  });
+  form.addEventListener('submit', formHanlder);
+}
+
+function formHanlder(e) {
+  e.preventDefault();
+  console.log(sheetName);
+  if (validate(sheetName)) {
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then((response) =>
+        swal('Good job!', 'You will recieve confirmation email soon', 'success')
+      )
+      .catch((error) => swal('Oops!', 'An error occured', 'error'));
+  } else {
+    swal('Please!', 'Fill all the field', 'info');
+  }
 }
