@@ -9,12 +9,12 @@ $('.registration-btn').on('click', () => {
   }
 });
 
-// For test purpose
-const options = $('#registrationType + .dropdown-menu > li');
-for (option of options) {
-  $(option).on('click', registrationTypeHandler);
-}
-// --------------------
+$('.big-registration-btn').on('click', () => {
+  const options = $('#registrationType + .dropdown-menu > li');
+  for (option of options) {
+    $(option).on('click', registrationTypeHandler);
+  }
+});
 
 function registrationTypeHandler(event) {
   $('#registerButton').addClass('d-block');
