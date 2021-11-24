@@ -581,11 +581,11 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
-#registrationModal .payment-container {
+#registrationModal .radio-container {
   display: flex;
 }
 
-#registrationModal .payment-container label {
+#registrationModal .radio-container label {
   margin-right: 10px;
 }
 

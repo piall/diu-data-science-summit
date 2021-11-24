@@ -827,11 +827,22 @@ function formHanlder(e) {
   e.preventDefault();
   console.log(sheetName);
   if (validate(sheetName)) {
+    $('#registrationModal').loading({
+      message: 'SAVING...',
+    });
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) =>
-        swal('Good job!', 'You will recieve confirmation email soon', 'success')
-      )
-      .catch((error) => swal('Oops!', 'An error occured', 'error'));
+      .then((response) => {
+        $('#registrationModal').loading('stop');
+        swal(
+          'Good job!',
+          'You will recieve confirmation email soon',
+          'success'
+        );
+      })
+      .catch((error) => {
+        $('#registrationModal').loading('stop');
+        swal('Oops!', 'An error occured', 'error');
+      });
   } else {
     swal('Please!', 'Fill all the field', 'info');
   }
