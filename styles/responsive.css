@@ -53,3 +53,29 @@
     justify-content: space-around;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .big-registration-btn {
+    padding: 15px 12px !important;
+  }
+
+  .big-button-container {
+    padding: 30px 0px !important;
+  }
+
+  #registration ul {
+    margin-right: 10px !important;
+  }
+
+  #registration .info-container p {
+    font-size: 16px !important;
+  }
+
+  #registration .guidelines {
+    font-size: 16px !important;
+  }
+
+  #about p {
+    font-size: 16px !important;
+  }
+}
