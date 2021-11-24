@@ -330,13 +330,14 @@ nav .registration-btn {
   margin-bottom: 30px;
 }
 
-#speaker .image-container {
+#speaker .image-container img {
   width: auto;
-  max-height: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 #speaker .card {
-  width: 100%;
+  width: auto;
 }
 
 #speaker .card img {
