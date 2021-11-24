@@ -295,12 +295,31 @@ nav .registration-btn {
   margin-bottom: 0px !important;
 }
 
-#about div {
+#about + div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+#about .details .image-container {
+  width: 100px;
+}
+
+#about .details .image-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+#about .details .info-container h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 24px;
+}
+
+#about .details .info-container p {
+  font-size: 18px;
+}
 /*----------------Speakers section----------------*/
 #speaker .col-md-4 {
   margin-bottom: var(--bs-gutter-x);
@@ -339,7 +358,7 @@ nav .registration-btn {
   letter-spacing: 0.5px;
   box-sizing: border-box;
   font-size: 0.875rem;
-  padding: 20px;
+  padding: 10px;
 }
 
 #speaker .card .title {
@@ -349,7 +368,7 @@ nav .registration-btn {
   background: transparent;
   color: #313131;
   font-family: 'Jost', sans-serif;
-  font-size: 1.875rem;
+  font-size: 22px;
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0;
