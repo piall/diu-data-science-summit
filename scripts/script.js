@@ -209,6 +209,18 @@ function renderFormForHackathon() {
         XL
       </label>
     </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Team Leader T-Shirt"
+        id="TL_Size"
+        value="XXL"
+      />
+      <label class="form-check-label" for="TL_Size">
+        XXL
+      </label>
+    </div>
   </div>
 </div>
   <div class="btn btn-info" id="addMoreMemberButton">
@@ -602,6 +614,18 @@ function addMoreMember() {
         XL
       </label>
     </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Third Member T-Shirt"
+        id="thirdMemberTL_Size"
+        value="XXL"
+      />
+      <label class="form-check-label" for="thirdMemberTL_Size">
+        XXL
+      </label>
+    </div>
   </div>
 </div>
 
@@ -697,6 +721,18 @@ function addMoreMember() {
       />
       <label class="form-check-label" for="secondMemberTL_Size">
         XL
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="Second Member T-Shirt"
+        id="secondMemberTL_Size"
+        value="XXL"
+      />
+      <label class="form-check-label" for="secondMemberTL_Size">
+        XXL
       </label>
     </div>
   </div>
