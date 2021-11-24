@@ -99,14 +99,14 @@ function renderFormForHackathon() {
 </div>
 <div class="mb-3">
   <label for="hackathon" class="form-label"
-    >Transaction Number</label
+    >Transaction ID</label
   >
   <input
     type="text"
     class="form-control"
     id="transactionNumber"
-    name="Transaction"
-    placeholder="Enter your transaction number"
+    name="Transaction ID"
+    placeholder="Enter your transaction ID"
   />
 </div>
 <div class="mb-3">
@@ -491,14 +491,14 @@ function renderFormForWorkshop() {
   </div>
   <div class="mb-3">
     <label for="Workshop" class="form-label"
-      >Transaction Number</label
+      >Transaction ID</label
     >
     <input
       type="text"
       class="form-control"
       id="transactionNumber"
-      name="Transaction"
-      placeholder="Enter your transaction number"
+      name="Transaction ID"
+      placeholder="Enter your transaction ID"
     />
   </div>
   `);
