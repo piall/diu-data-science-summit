@@ -266,7 +266,7 @@ function renderFormForPanelDiscussion() {
   </div>
   <div class="mb-3">
     <label for="Pannel Discussion" class="form-label"
-      >Email address</label
+      >Email Address</label
     >
     <input
       type="email"
@@ -344,7 +344,7 @@ function renderFormForSeminar() {
   </div>
   <div class="mb-3">
     <label for="Seminar" class="form-label"
-      >Email address</label
+      >Email Address</label
     >
     <input
       type="email"
@@ -405,7 +405,7 @@ function renderFormForWorkshop() {
   </div>
   <div class="mb-3">
     <label for="Workshop" class="form-label"
-      >Email address</label
+      >Email Address</label
     >
     <input
       type="email"
