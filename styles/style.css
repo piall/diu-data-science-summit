@@ -39,7 +39,8 @@ p {
 }
 
 #organiser .row,
-#partner .row {
+#partner .row,
+#venue .row {
   --bs-gutter-x: 0;
 }
 
@@ -568,6 +569,66 @@ nav .registration-btn {
 
 #previous > .row > div {
   margin-bottom: var(--bs-gutter-x);
+}
+
+/*----------------Venue Info----------------*/
+#venue {
+  background-color: var(--purple-color);
+  margin-bottom: 100px;
+}
+
+#venue .section-title {
+  color: white;
+}
+
+#venue .image-container {
+  position: relative;
+}
+
+#venue .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  background-color: rgba(16, 18, 19, 0.096);
+}
+
+#venue .image-container img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+#venue iframe {
+  height: 500px;
+}
+
+#venue .icon-container {
+  text-align: center;
+}
+
+#venue .icon-container img {
+  width: 60px;
+  height: 60px;
+}
+
+#venue .info-container h2 {
+  color: white;
+  font-family: 'Jost', sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+#venue .info-container p {
+  color: white;
+  margin-bottom: 0px;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: center;
 }
 
 /*----------------Footer----------------*/

@@ -44,6 +44,10 @@
     margin-bottom: 18px !important;
     margin-left: 0px !important;
   }
+
+  #venue .p-5 {
+    padding: 10px !important;
+  }
 }
 
 @media screen and (min-width: 980px) {
