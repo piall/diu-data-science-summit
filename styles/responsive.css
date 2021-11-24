@@ -39,6 +39,11 @@
   .section-title {
     font-size: 44px !important;
   }
+
+  .registration-btn {
+    margin-bottom: 18px !important;
+    margin-left: 0px !important;
+  }
 }
 
 @media screen and (min-width: 980px) {

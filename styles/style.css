@@ -596,6 +596,11 @@ footer a:hover {
   overflow-y: auto;
 }
 
+form .form-control:focus {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
 #registrationModal .input-container {
   max-height: calc(100vh - 267px);
   overflow: auto;
