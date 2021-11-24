@@ -557,12 +557,13 @@ footer a:hover {
 }
 
 /*----------------Footer----------------*/
-#registrationModal .modal-content {
-  height: 80vh;
+#registrationModal .modal-body {
+  max-height: calc(100vh - 143px);
+  overflow-y: auto;
 }
 
 #registrationModal .input-container {
-  height: 50vh;
+  max-height: calc(100vh - 267px);
   overflow: auto;
   margin-bottom: 10px;
 }
@@ -628,7 +629,10 @@ footer a:hover {
   justify-content: center;
 }
 
-#registerButton button {
+.register-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   color: var(--deep-black-color);
   background: linear-gradient(
     165deg,
